@@ -36,26 +36,26 @@ const TutorialHeader = () => (
           return (
       <>
         <Header aria-label="IBM Platform Name"
-          onClick={
+          /*onClick={
             isSideNavExpanded === true ? onClickSideNavExpand : null
-          }>
+          }*/>
           <SkipToContent />
           <HeaderMenuButton
             aria-label="Open menu"
             onClick={onClickSideNavExpand}
             isActive={isSideNavExpanded}
           />
-          <HeaderName element={Link} to="/" prefix="IBM">
+          <HeaderName href="/" prefix="IBM">
             [Platform]
         </HeaderName>
           <HeaderNavigation aria-label="IBM [Platform]">
-            <HeaderMenuItem element={Link} to="/repos">Repositories</HeaderMenuItem>
+            <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
             <HeaderMenuItem href="#">Link 2</HeaderMenuItem>
             <HeaderMenuItem href="#">Link 3</HeaderMenuItem>
             <HeaderMenu aria-label="Link 4" menuLinkName="Link 4">
-              <HeaderMenuItem href="#">Sub-link 1</HeaderMenuItem>
-              <HeaderMenuItem href="#">Sub-link 2</HeaderMenuItem>
-              <HeaderMenuItem href="#">Sub-link 3</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="#">Sub-link 1</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="#">Sub-link 2</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="#">Sub-link 3</HeaderMenuItem>
             </HeaderMenu>
           </HeaderNavigation>
           <SideNav
@@ -64,7 +64,7 @@ const TutorialHeader = () => (
             isPersistent={false}>
             <SideNavItems>
               <HeaderSideNavItems>
-                <HeaderMenuItem element={Link} to="/repos">
+                <HeaderMenuItem href="/repos">
                   Repositories
               </HeaderMenuItem>
                 <HeaderMenuItem href="#">
@@ -76,9 +76,9 @@ const TutorialHeader = () => (
                 <HeaderMenu
                   aria-label="Link 4"
                   menuLinkName="Link 4">
-                  <HeaderMenuItem href="#">Sub-link 1</HeaderMenuItem>
-                  <HeaderMenuItem href="#">Sub-link 2</HeaderMenuItem>
-                  <HeaderMenuItem href="#">Sub-link 3</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="#">Sub-link 1</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="#">Sub-link 2</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="#">Sub-link 3</HeaderMenuItem>
                 </HeaderMenu>
               </HeaderSideNavItems>
             </SideNavItems>
