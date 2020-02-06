@@ -6,6 +6,8 @@
 @import './content/LandingPage/landing-page.scss';
 @import './content/OverviewPage/overview-page.scss';
 
+//TODO: Hex durch Tokens ersetzten
+
 .bx--side-nav__navigation	{
   background-color: #171717;
   -webkit-text-fill-color: #bebebe;
@@ -20,29 +22,28 @@
 
 .bx--header__menu-item{
   -webkit-text-fill-color: #bebebe;
-  text-decoration-color: red;
-  -webkit-text-stroke-color: red;
 }
 
-/* .bx--header__menu-item:hover{
-  background-color: red;
-  color: red;
-  fill: red;
-  -webkit-text-fill-color: #f4f4f4;
+.bx--side-nav__icon>svg{
+  fill: #bebebe; 
 }
 
-.bx--header__menu-arrow{
-  color: red;
-  fill: red;
-  background-color: red;
-  -webkit-text-fill-color: red;
-  color
+.bx--side-nav a.bx--header__menu-item:hover .bx--header__menu-arrow, .bx--side-nav a.bx--header__menu-item:focus .bx--header__menu-arrow, .bx--side-nav .bx--header__menu-arrow {
+  fill: #bebebe;
 }
 
-.bx--side-nav__item:hover{
-  background-color: red;
+.bx--side-nav__submenu:hover{
+  background-color: #353535;
 }
-.bx--side-nav__menu-item:hover{
-  background-color: red;
-} */
 
+.bx--side-nav__item:not(.bx--side-nav__item--active):hover>.bx--side-nav__link, .bx--side-nav__item:not(.bx--side-nav__item--active):hover>.bx--side-nav__submenu, .bx--side-nav__menu[role=menu] a.bx--side-nav__link[role=menuitem]:not(.bx--side-nav__link--current):not([aria-current=page]):hover {
+  background-color: #353535;
+}
+
+.bx--side-nav__item:not(.bx--side-nav__item--active):hover .bx--side-nav__item:not(.bx--side-nav__item--active) > .bx--side-nav__submenu:hover, .bx--side-nav__item:not(.bx--side-nav__item--active) > .bx--side-nav__link:hover, .bx--side-nav__menu[role='menu'] a.bx--side-nav__link[role='menuitem']:not(.bx--side-nav__link--current):not([aria-current='page']):hover, .bx--side-nav a.bx--header__menu-item:hover, .bx--side-nav .bx--header__menu-title[aria-expanded='true']:hover {
+  background-color: #353535;
+}
+
+.bx--side-nav .bx--header__menu-title[aria-expanded='true'] + .bx--header__menu a.bx--header__menu-item:hover {
+  background-color: #353535;
+}

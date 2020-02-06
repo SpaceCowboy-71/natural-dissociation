@@ -39,7 +39,7 @@ const TutorialHeader = () => (
               [Platform]
             </HeaderName>
             <HeaderNavigation aria-label="Natural Dissociation">
-            <HeaderMenuItem href="/playlists">Playlists</HeaderMenuItem>
+            <HeaderMenuItem href="/overview">Playlists</HeaderMenuItem>
             <HeaderMenuItem href="https://www.last.fm/de/user/SpaceUlysses" target="_blank">Last.fm</HeaderMenuItem>
             <HeaderMenu aria-label="Finished" menuLinkName="Finished">
               <HeaderMenuItem element={Link} to="#">Playlist 1</HeaderMenuItem>
@@ -158,8 +158,8 @@ const TutorialHeader = () => (
             Dissociation
         </HeaderName>
           <HeaderNavigation aria-label="Natural Dissociation">
-            <HeaderMenuItem href="/playlists">Playlists</HeaderMenuItem>
             <HeaderMenuItem href="https://www.last.fm/de/user/SpaceUlysses" target="_blank">Last.fm</HeaderMenuItem>
+            <HeaderMenuItem href="/overview">Overview</HeaderMenuItem>
             <HeaderMenu aria-label="Finished" menuLinkName="Finished">
               <HeaderMenuItem element={Link} to="#">Playlist 1</HeaderMenuItem>
               <HeaderMenuItem element={Link} to="#">Playlist 2</HeaderMenuItem>
@@ -173,11 +173,11 @@ const TutorialHeader = () => (
             isChildOfHeader={true}>
             <SideNavItems>
               <HeaderSideNavItems>
-                <HeaderMenuItem href="/playlists">
-                  Playlists
-              </HeaderMenuItem>
                 <HeaderMenuItem href="https://www.last.fm/de/user/SpaceUlysses" target="_blank">
                   Last.fm
+              </HeaderMenuItem>
+              <HeaderMenuItem href="/overview">
+                  Overview
               </HeaderMenuItem>
                 <HeaderMenu
                   aria-label="Finished"
