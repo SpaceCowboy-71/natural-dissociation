@@ -1,3 +1,10 @@
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss';
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/layout/scss/breakpoint.scss';
+@import 'carbon-components/scss/globals/scss/typography.scss';
+@import 'carbon-components/scss/globals/scss/vars.scss';
+@import './components/TutorialHeader/tutorial-header.scss';
+@import './content/LandingPage/landing-page.scss';
+@import './content/OverviewPage/overview-page.scss';
 
 .bx--side-nav__navigation	{
   background-color: #171717;
@@ -5,7 +12,7 @@
   border-right-width: 1px;
   border-right-style: solid; 
   border-right-color: #575757;
-}
+} 
 
 .bx--side-nav__menu-item	{
 -webkit-text-fill-color: #bebebe ;
@@ -39,6 +46,3 @@
   background-color: red;
 } */
 
-@import './components/TutorialHeader/tutorial-header.scss';
-@import './content/LandingPage/landing-page.scss';
-@import './content/OverviewPage/overview-page.scss';

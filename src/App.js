@@ -10,7 +10,7 @@ import OverviewPage from './content/OverviewPage';
 const App = () => {
   return (
     <>
-      <TutorialHeader />
+  <TutorialHeader />
       <Content>
         <Switch>
           <Route exact path="/" component={LandingPage} />

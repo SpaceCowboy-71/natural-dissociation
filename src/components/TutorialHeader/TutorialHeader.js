@@ -128,7 +128,7 @@ const TutorialHeader = () => (
   
   
   //CODE FÜR FLEXIBLE SIDENAV
-  <HeaderContainer
+  <HeaderContainer 
     render={({ isSideNavExpanded, onClickSideNavExpand }) => {
           window.addEventListener(
             'resize',
@@ -169,7 +169,8 @@ const TutorialHeader = () => (
           <SideNav
             aria-label="Side navigation"
             expanded={isSideNavExpanded}
-            isPersistent={false}>
+            isPersistent={false}
+            isChildOfHeader={true}>
             <SideNavItems>
               <HeaderSideNavItems>
                 <HeaderMenuItem href="/playlists">
@@ -186,6 +187,19 @@ const TutorialHeader = () => (
                   <HeaderMenuItem element={Link} to="#">Playlist 3</HeaderMenuItem>
                 </HeaderMenu>
               </HeaderSideNavItems>
+
+              <SideNavMenu title="L0 menu 1">
+            <SideNavMenuItem href="javascript:void(0)">
+              L0 menu item 1
+            </SideNavMenuItem>
+            <SideNavMenuItem href="javascript:void(0)">
+              L0 menu item 2
+            </SideNavMenuItem>
+            <SideNavMenuItem href="javascript:void(0)">
+              L0 menu item 3
+            </SideNavMenuItem>
+          </SideNavMenu>
+
             </SideNavItems>
           </SideNav>
           <HeaderGlobalBar>
