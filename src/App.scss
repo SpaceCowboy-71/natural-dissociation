@@ -1,13 +1,44 @@
-/*
+
 .bx--side-nav__navigation	{
   background-color: #171717;
   -webkit-text-fill-color: #bebebe;
+  border-right-width: 1px;
+  border-right-style: solid; 
+  border-right-color: #575757;
 }
 
 .bx--side-nav__menu-item	{
 -webkit-text-fill-color: #bebebe ;
 }
-*/
+
+.bx--header__menu-item{
+  -webkit-text-fill-color: #bebebe;
+  text-decoration-color: red;
+  -webkit-text-stroke-color: red;
+}
+
+/* .bx--header__menu-item:hover{
+  background-color: red;
+  color: red;
+  fill: red;
+  -webkit-text-fill-color: #f4f4f4;
+}
+
+.bx--header__menu-arrow{
+  color: red;
+  fill: red;
+  background-color: red;
+  -webkit-text-fill-color: red;
+  color
+}
+
+.bx--side-nav__item:hover{
+  background-color: red;
+}
+.bx--side-nav__menu-item:hover{
+  background-color: red;
+} */
+
 @import './components/TutorialHeader/tutorial-header.scss';
 @import './content/LandingPage/landing-page.scss';
 @import './content/OverviewPage/overview-page.scss';
