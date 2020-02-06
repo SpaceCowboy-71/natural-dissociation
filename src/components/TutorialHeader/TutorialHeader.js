@@ -45,17 +45,16 @@ const TutorialHeader = () => (
             onClick={onClickSideNavExpand}
             isActive={isSideNavExpanded}
           />
-          <HeaderName href="/" prefix="IBM">
-            [Platform]
+          <HeaderName href="/" prefix="Natural">
+            Dissociation
         </HeaderName>
-          <HeaderNavigation aria-label="IBM [Platform]">
-            <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
-            <HeaderMenuItem href="#">Link 2</HeaderMenuItem>
-            <HeaderMenuItem href="#">Link 3</HeaderMenuItem>
-            <HeaderMenu aria-label="Link 4" menuLinkName="Link 4">
-              <HeaderMenuItem element={Link} to="#">Sub-link 1</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="#">Sub-link 2</HeaderMenuItem>
-              <HeaderMenuItem element={Link} to="#">Sub-link 3</HeaderMenuItem>
+          <HeaderNavigation aria-label="Natural Dissociation">
+            <HeaderMenuItem href="/playlists">Playlists</HeaderMenuItem>
+            <HeaderMenuItem href="https://www.last.fm/de/user/SpaceUlysses" target="_blank">Last.fm</HeaderMenuItem>
+            <HeaderMenu aria-label="Finished" menuLinkName="Finished">
+              <HeaderMenuItem element={Link} to="#">Playlist 1</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="#">Playlist 2</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="#">Playlist 3</HeaderMenuItem>
             </HeaderMenu>
           </HeaderNavigation>
           <SideNav
@@ -64,21 +63,18 @@ const TutorialHeader = () => (
             isPersistent={false}>
             <SideNavItems>
               <HeaderSideNavItems>
-                <HeaderMenuItem href="/repos">
-                  Repositories
+                <HeaderMenuItem href="/playlists">
+                  Playlists
               </HeaderMenuItem>
-                <HeaderMenuItem href="#">
-                  Link 2
-              </HeaderMenuItem>
-                <HeaderMenuItem href="#">
-                  Link 3
+                <HeaderMenuItem href="https://www.last.fm/de/user/SpaceUlysses" target="_blank">
+                  Last.fm
               </HeaderMenuItem>
                 <HeaderMenu
-                  aria-label="Link 4"
-                  menuLinkName="Link 4">
-                  <HeaderMenuItem element={Link} to="#">Sub-link 1</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="#">Sub-link 2</HeaderMenuItem>
-                  <HeaderMenuItem element={Link} to="#">Sub-link 3</HeaderMenuItem>
+                  aria-label="Finished"
+                  menuLinkName="Finished">
+                  <HeaderMenuItem element={Link} to="#">Playlist 1</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="#">Playlist 2</HeaderMenuItem>
+                  <HeaderMenuItem element={Link} to="#">Playlist 3</HeaderMenuItem>
                 </HeaderMenu>
               </HeaderSideNavItems>
             </SideNavItems>
