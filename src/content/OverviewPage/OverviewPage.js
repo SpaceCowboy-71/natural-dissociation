@@ -1,10 +1,26 @@
 import React from 'react';
+import { ModalWrapper } from 'carbon-components-react';
 
 const OverviewPage = () => {
   return (
     <div className="bx--grid">
     <div className="bx--row">
       <section className="bx--col-lg-16">
+
+      <ModalWrapper
+        passiveModal
+        modalLabel="About"
+        modalHeading="Natural Dissociation"
+        id="transactional-passive-modal"
+        handleSubmit={() => {
+          onclick('onSubmit')();
+          return true;
+        }}>
+        <p className={`bx--modal-content__text`}>
+        <br /><br />Version 0.1.0<br /><br />Copyright B.Bärenstark 2020
+        </p>
+      </ModalWrapper>
+
         <h2
           style={{
             fontWeight: "800",
@@ -16,7 +32,7 @@ const OverviewPage = () => {
         </h2>
         <p style={{ lineHeight: "20px" }}>
           The shell is perhaps the most crucial piece of any UI built with
-          Carbon. It contains the shared navigation framework for the entire
+          Carbon. It contains the shared navigation framework for the entire 
           design system and ties the products in IBM’s portfolio together in a
           cohesive and elegant way. The shell is the home of the topmost
           navigation, where users can quickly and dependably gain their
