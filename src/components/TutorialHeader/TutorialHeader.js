@@ -153,6 +153,10 @@ const TutorialHeader = () => (
             aria-label="Open menu"
             onClick={onClickSideNavExpand}
             isActive={isSideNavExpanded}
+            //isPersistent={true}
+            //hidden={false}
+            //disabled={false}  
+            display
           />
           <HeaderName href="/" prefix="Natural">
             Dissociation
