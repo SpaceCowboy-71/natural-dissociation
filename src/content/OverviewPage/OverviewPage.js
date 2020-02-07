@@ -7,20 +7,6 @@ const OverviewPage = () => {
     <div className="bx--row">
       <section className="bx--col-lg-16">
 
-      <ModalWrapper
-        passiveModal
-        modalLabel="About"
-        modalHeading="Natural Dissociation"
-        id="transactional-passive-modal"
-        handleSubmit={() => {
-          onclick('onSubmit')();
-          return true;
-        }}>
-        <p className={`bx--modal-content__text`}>
-        <br /><br />Version 0.1.0<br /><br />Copyright B.Bärenstark 2020
-        </p>
-      </ModalWrapper>
-
         <h2
           style={{
             fontWeight: "800",
