@@ -1,25 +1,20 @@
-import React from 'react';
-import './App.scss';
-import { Content } from 'carbon-components-react/lib/components/UIShell';
-import TutorialHeader from './components/TutorialHeader';
-import { Route, Switch } from 'react-router-dom';
-import LandingPage from './content/LandingPage';
-import OverviewPage from './content/OverviewPage';
+import React, { lazy, Suspense } from "react";
+import "./App.scss";
 
+const TutorialHeader = lazy(() => import("./components/TutorialHeader"));
+const Content = lazy(() => import("./components/Content/Content"));
 
 const App = () => {
   return (
     <>
-  <TutorialHeader />
-      <Content>
-        <Switch>
-          <Route exact path="/" component={LandingPage} />
-          <Route path="/overview" component={OverviewPage} />
-        </Switch>
-      </Content>
+      <Suspense fallback="loading">
+        <TutorialHeader />
+      </Suspense>
+      <Suspense fallback="loading">
+        <Content />
+      </Suspense>
     </>
   );
-}
-
+};
 
 export default App;

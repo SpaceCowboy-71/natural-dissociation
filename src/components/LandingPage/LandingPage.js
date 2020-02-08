@@ -7,6 +7,7 @@ import {
   Tab,
 } from 'carbon-components-react';
 import logo from './tab-illo.png'
+import { useTranslation } from 'react-i18next';
 
 const props = {
   tabs: {
@@ -22,13 +23,14 @@ const props = {
 };
 
 const LandingPage = () => {
+  const {t}=useTranslation()
   return (
     <div className="bx--grid bx--grid--full-width landing-page bx--no-gutter">
       <div className="bx--row landing-page__banner">
         <div className="bx--col-lg-16">
           <Breadcrumb noTrailingSlash aria-label="Page navigation">
             <BreadcrumbItem>
-              <a href="/">Getting started</a>
+              <a href="/">{t("Hello World")}</a>
             </BreadcrumbItem>
           </Breadcrumb>
           <h1 className="landing-page__heading">
