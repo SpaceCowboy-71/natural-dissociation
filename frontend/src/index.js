@@ -4,9 +4,7 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
-
-// Only init firebase for analytics now.
-import "./models/firebase"
+import "./i18n/i18n"
 
 ReactDOM.render(
     <Router>
