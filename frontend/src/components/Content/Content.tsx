@@ -28,7 +28,7 @@ export default () => {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route path="/overview" component={OverviewPage} />
-        <Route path="/spotify" component={SpotifyPlaylistInfo} />
+        <Route path="/spotify/:id" component={SpotifyPlaylistInfo} />
       </Switch>
     </Content>
   );

@@ -3,8 +3,7 @@ import {
   SideNavMenu,
   SideNavMenuItem
 } from "carbon-components-react/lib/components/UIShell";
-import { SpotifyPlaylistMetadata } from "../../model/data.types";
-import { getAllSpotifyPlaylists } from "../../model/db";
+import { useAllSpotifyPlaylists } from "../../hooks/db";
 import { useHistory } from "react-router-dom";
 
 export default function() {
@@ -12,17 +11,10 @@ export default function() {
   const history = useHistory();
 
   return (
-    <SideNavMenu title="L0 menu 1">
+    <SideNavMenu title="Finished">
       {playlists.map(playlist => {
         return (
-          <SideNavMenuItem
-            onClick={() => {
-              history.push({
-                pathname: "/spotify",
-                state: { playlist }
-              });
-            }}
-          >
+          <SideNavMenuItem key={playlist.id} href={"/spotify/" + playlist.id}>
             {playlist.title}
           </SideNavMenuItem>
         );
@@ -30,35 +22,4 @@ export default function() {
     </SideNavMenu>
   );
 
-  /*
-  return (
-    <SideNavMenu title="L0 menu 1">
-      <SideNavMenuItem href="javascript:void(0)">
-        L0 menu item 1
-      </SideNavMenuItem>
-      <SideNavMenuItem href="javascript:void(0)">
-        L0 menu item 2
-      </SideNavMenuItem>
-      <SideNavMenuItem href="javascript:void(0)">
-        L0 menu item 3
-      </SideNavMenuItem>
-    </SideNavMenu>
-  );
-  */
-}
-
-/**
- * Fetch all playlists for spotify and return them directly. Returns
- * empty array if no playlists are found or not fetched yet.
- */
-function useAllSpotifyPlaylists() {
-  const [playlists, setPlaylists] = useState<SpotifyPlaylistMetadata[]>([]);
-
-  useEffect(() => {
-    getAllSpotifyPlaylists().then(playlists => {
-      setPlaylists(playlists);
-    });
-  }, [setPlaylists]);
-
-  return playlists;
 }

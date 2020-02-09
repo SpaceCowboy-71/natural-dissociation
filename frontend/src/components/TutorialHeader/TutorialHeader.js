@@ -137,6 +137,7 @@ const EnhancedInformationHeaderGlobalAction = () => {
     isModalOpen
   ]);
 
+  const { t } = useTranslation();
   return (
     <>
       <HeaderGlobalAction aria-label="Information" onClick={openModal}>
@@ -152,10 +153,10 @@ const EnhancedInformationHeaderGlobalAction = () => {
         <p className={`bx--modal-content__text`}>
           <br />
           <br />
-          Version 0.1.0
+          {t("Version Number")}
           <br />
           <br />
-          Copyright B.Bärenstark 2020
+          {t("Copyright")}
         </p>
       </Modal>
     </>

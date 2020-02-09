@@ -10,7 +10,8 @@
 
 import React, { memo, ReactNode } from "react";
 import { SpotifyPlaylistMetadata } from "../../model/data.types";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useSingleSpotifyPlaylist } from "../../hooks/db";
 
 /*
  *
@@ -27,12 +28,10 @@ interface SpotifyPlaylistInfoProps {}
  */
 
 export default function<SpotifyPlaylistInfoProps>(props) {
-  const location = useLocation();
+  const urlParams = useParams<{ id: string }>();
+  const playlist = useSingleSpotifyPlaylist(urlParams.id);
 
-  // @ts-ignore
-  const playlist: SpotifyPlaylistMetadata = location.state.playlist as SpotifyPlaylistMetadata;
-
-  // console.warn("playlist:", playlist);
+  console.warn("playlist:", playlist);
 
   return <div>{JSON.stringify(playlist)}</div>;
 }
