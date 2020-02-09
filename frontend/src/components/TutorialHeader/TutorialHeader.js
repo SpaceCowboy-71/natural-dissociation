@@ -23,7 +23,6 @@ import { useTranslation } from "react-i18next";
 import SideNavPlaylistMenu from "./SideNavPlaylistMenu";
 
 const TutorialHeader = () => {
-  const { t } = useTranslation();
   return (
     <>
       <HeaderContainer
@@ -54,7 +53,7 @@ const TutorialHeader = () => {
                   isActive={isSideNavExpanded}
                 />
                 <HeaderName href="/" prefix="Natural">
-                  {t("Hello World")}
+                  Dissociation
                 </HeaderName>
                 <HeaderNavigation aria-label="Natural Dissociation">
                   <HeaderMenuItem
@@ -144,6 +143,8 @@ const EnhancedInformationHeaderGlobalAction = () => {
         <Information20 />
       </HeaderGlobalAction>
       <Modal
+      modalLabel="About"
+      modalHeading="Natural Dissociation"
         id="modal1"
         aria-label="modal1"
         open={isModalOpen}
