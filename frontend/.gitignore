@@ -1,2 +1,6 @@
 node_modules
 .DS_Store
+build
+
+# auth firebase
+config.fire.json
