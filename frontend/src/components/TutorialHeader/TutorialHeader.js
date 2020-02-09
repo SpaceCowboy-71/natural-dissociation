@@ -15,13 +15,12 @@ import {
   HeaderMenu,
   SideNav,
   SideNavItems,
-  HeaderSideNavItems,
-  SideNavMenu,
-  SideNavMenuItem,
+  HeaderSideNavItems
 } from "carbon-components-react/lib/components/UIShell";
 import { Modal } from "carbon-components-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import SideNavPlaylistMenu from "./SideNavPlaylistMenu";
 
 const TutorialHeader = () => {
   const { t } = useTranslation();
@@ -105,17 +104,7 @@ const TutorialHeader = () => {
                       </HeaderMenu>
                     </HeaderSideNavItems>
 
-                    <SideNavMenu title="L0 menu 1">
-                      <SideNavMenuItem href="javascript:void(0)">
-                        L0 menu item 1
-                      </SideNavMenuItem>
-                      <SideNavMenuItem href="javascript:void(0)">
-                        L0 menu item 2
-                      </SideNavMenuItem>
-                      <SideNavMenuItem href="javascript:void(0)">
-                        L0 menu item 3
-                      </SideNavMenuItem>
-                    </SideNavMenu>
+                    <SideNavPlaylistMenu />
                   </SideNavItems>
                 </SideNav>
                 <HeaderGlobalBar>

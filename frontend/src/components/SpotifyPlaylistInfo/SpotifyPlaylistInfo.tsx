@@ -1,16 +1,16 @@
 //
 // SpotifyPlaylistInfo.tsx
-// 
+//
 //
 // Created by Thomas Schönmann on 08.02.2020
 // Copyright © 2020 expressFlow GmbH. All rights reserved.
 //
-// 
+//
 //
 
-import React, { memo, ReactNode } from 'react';
-import { SpotifyPlaylistMetadata } from '../../model/data.types';
-
+import React, { memo, ReactNode } from "react";
+import { SpotifyPlaylistMetadata } from "../../model/data.types";
+import { useLocation } from "react-router-dom";
 
 /*
  *
@@ -18,9 +18,7 @@ import { SpotifyPlaylistMetadata } from '../../model/data.types';
  *
  */
 
-interface SpotifyPlaylistInfoProps {
-    metadata:SpotifyPlaylistMetadata
-}
+interface SpotifyPlaylistInfoProps {}
 
 /*
  *
@@ -28,8 +26,13 @@ interface SpotifyPlaylistInfoProps {
  *
  */
 
-export default memo<SpotifyPlaylistInfoProps>(props => {
- const {metadata} = props;
+export default function<SpotifyPlaylistInfoProps>(props) {
+  const location = useLocation();
 
- return null;
-});
+  // @ts-ignore
+  const playlist: SpotifyPlaylistMetadata = location.state.playlist as SpotifyPlaylistMetadata;
+
+  // console.warn("playlist:", playlist);
+
+  return <div>{JSON.stringify(playlist)}</div>;
+}

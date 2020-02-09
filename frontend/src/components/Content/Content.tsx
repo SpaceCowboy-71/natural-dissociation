@@ -14,6 +14,7 @@ import { Route, Switch } from "react-router-dom";
 import LandingPage from "../LandingPage";
 import OverviewPage from "../OverviewPage";
 import FetchContainer from "../SpotifyPlaylistInfo/FetchContainer";
+import SpotifyPlaylistInfo from "../SpotifyPlaylistInfo/SpotifyPlaylistInfo"
 
 /*
  *
@@ -27,7 +28,7 @@ export default () => {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route path="/overview" component={OverviewPage} />
-        <Route path="/spotify/:metadata" component={FetchContainer} />
+        <Route path="/spotify" component={SpotifyPlaylistInfo} />
       </Switch>
     </Content>
   );
