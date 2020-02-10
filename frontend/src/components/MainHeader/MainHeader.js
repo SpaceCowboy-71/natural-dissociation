@@ -160,10 +160,10 @@ const EnhancedInformationHeaderGlobalAction = () => {
         <p className={`bx--modal-content__text`}>
           <br />
           <br />
-          {t("Copyright")}
-          <br />
-          <br />
           {t("Version Number")}
+          <br />
+          <br />
+          {t("Copyright")}
           <br />
           <br />
           Made utilizing the{" "}

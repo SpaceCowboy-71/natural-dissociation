@@ -7,10 +7,10 @@ const Content = lazy(() => import("./components/Content/Content"));
 const App = () => {
   return (
     <>
-      <Suspense fallback="loading">
+      <Suspense fallback="">
         <MainHeader />
       </Suspense>
-      <Suspense fallback="loading">
+      <Suspense fallback="">
         <Content />
       </Suspense>
     </>

@@ -11,6 +11,44 @@ export default function() {
   const history = useHistory();
 
   return (
+    <>
+      <SideNavMenu title="Collections">
+        {playlists
+          .filter(playlist => playlist.category === "collection")
+          .map(playlist => {
+            return (
+              <SideNavMenuItem
+                key={playlist.id}
+                href={"/spotify/" + playlist.id}
+              >
+                {playlist.title}
+              </SideNavMenuItem>
+            );
+          })}
+      </SideNavMenu>
+      <SideNavMenu title="Finished">
+        {playlists
+          .filter(playlist => playlist.category === "finished")
+          .map(playlist => {
+            return (
+              <SideNavMenuItem
+                key={playlist.id}
+                href={"/spotify/" + playlist.id}
+              >
+                {playlist.title}
+              </SideNavMenuItem>
+            );
+          })}
+      </SideNavMenu>
+    </>
+  );
+}
+
+/* export default function() {
+  const playlists = useAllSpotifyPlaylists();
+  const history = useHistory();
+
+  return (
     <SideNavMenu title="Finished">
       {playlists.map(playlist => {
         return (
@@ -21,5 +59,4 @@ export default function() {
       })}
     </SideNavMenu>
   );
-
-}
+} */
