@@ -1,17 +1,4 @@
-html {
-    background: black;
-}
 
-.bx--content__master {
-  background-color: black;
-  padding-right: 0;
-  padding-left: 0;
-  padding-top: 0;
-}
-
-.bx--row{
-    margin-right: 0;
-}
 
 .playlist-image {
   position: absolute;
@@ -23,24 +10,26 @@ html {
 }
 
 .playlist-info-page__banner {
-    position: relative;
+  position: relative;
   padding-bottom: $spacing-10 * 9.5;
-
+  margin-right: 0;
 }
 
-.playlist-info-page__body{
-    position: relative;
-    padding-left: $spacing-08;
-    padding-top: $spacing-06 * 3;
-    padding-right: 10%;
+.playlist-info-page__body {
+  position: relative;
+  padding-left: $spacing-08;
+  padding-top: $spacing-06 * 3;
+  padding-bottom: $spacing-09;
+  padding-right: 10%;
+  margin-right: 0;
 }
 
-.playlist-info-page__heading{
-    @include carbon--type-style('expressive-paragraph-01');
-    @include carbon--font-weight('semibold');
+.playlist-info-page__heading {
+  @include carbon--type-style("expressive-paragraph-01");
+  @include carbon--font-weight("semibold");
 }
 
-.playlist-info-page__p{
-    @include carbon--type-style('productive-heading-04');
-    @include carbon--font-weight('light');
+.playlist-info-page__p {
+  @include carbon--type-style("productive-heading-04");
+  @include carbon--font-weight("light");
 }
