@@ -81,8 +81,9 @@ const MainHeader = () => {
                 <SideNav
                   aria-label="Side navigation"
                   expanded={isSideNavExpanded}
-                  isPersistent={false}
                   isChildOfHeader={true}
+                  isPersistent={false}
+                  isFixedNav={false} //true -> no hover-expand but no animation
                 >
                   <SideNavItems>
                     <HeaderSideNavItems>

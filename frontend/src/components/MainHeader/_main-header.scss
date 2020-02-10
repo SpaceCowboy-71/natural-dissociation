@@ -7,9 +7,15 @@
 .bx--side-nav__navigation {
   background-color: #171717;
   -webkit-text-fill-color: #bebebe;
-  border-right-width: 1px;
+  //border-right-width: 1px;
   border-right-style: solid;
   border-right-color: #575757;
+}
+
+//For on-hover-expand remove this and set border-right-width to 1px in .bx--side-nav__navigation
+.bx--side-nav:not(.bx--side-nav--fixed):hover,
+.bx--side-nav--expanded {
+  border-right-width: 1px;
 }
 
 .bx--side-nav__menu-item {
