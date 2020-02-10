@@ -12,6 +12,7 @@ import React, { memo, ReactNode } from "react";
 import { SpotifyPlaylistMetadata } from "../../model/data.types";
 import { useParams } from "react-router-dom";
 import { useSingleSpotifyPlaylist } from "../../hooks/db";
+import Image from "./test.jpg";
 
 /*
  *
@@ -33,5 +34,32 @@ export default function<SpotifyPlaylistInfoProps>(props) {
 
   console.warn("playlist:", playlist);
 
-  return <div>{JSON.stringify(playlist)}</div>;
+  return (
+    <>
+      <div className="bx--grid bx--grid--full-width playlist-info-page bx--no-gutter">
+        <div className="bx--row playlist-info-page__banner bx--no-gutter">
+          <div className="bx--col-lg-16 bx-.bx--no-gutter--right">
+            <img src={Image} className="playlist-image" />
+          </div>
+        </div>
+
+        <div className="bx--row playlist-info-page__body">
+          <div className="bx--col-md-4 bx--offset-lg-3 bx--col-lg-5">
+            <h2 className="playlist-info-page__heading">
+              Carbon Design System
+            </h2>
+            <br />
+          </div>
+          <div className="bx--col-md-4  bx--col-lg-8">
+            <p className="playlist-info-page__p">
+              Carbon is IBM’s open-source design system for products and
+              experiences. With the IBM Design Language as its foundation, the
+              system consists of working code, design tools and resources, human
+              interface guidelines, and a vibrant community of contributors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -8,13 +8,13 @@
 //
 //
 
-import React, {  } from "react";
+import React from "react";
 import { Content } from "carbon-components-react/lib/components/UIShell";
 import { Route, Switch } from "react-router-dom";
 import LandingPage from "../LandingPage";
 import OverviewPage from "../OverviewPage";
 import FetchContainer from "../SpotifyPlaylistInfo/FetchContainer";
-import SpotifyPlaylistInfo from "../SpotifyPlaylistInfo/SpotifyPlaylistInfo"
+import SpotifyPlaylistInfo from "../SpotifyPlaylistInfo/SpotifyPlaylistInfo";
 
 /*
  *
@@ -24,11 +24,21 @@ import SpotifyPlaylistInfo from "../SpotifyPlaylistInfo/SpotifyPlaylistInfo"
 
 export default () => {
   return (
-    <Content>
+    <Content className="bx--content__master">
       <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/overview" component={OverviewPage} />
-        <Route path="/spotify/:id" component={SpotifyPlaylistInfo} />
+        <Route exact path="/">
+          <Content>
+            <LandingPage />
+          </Content>
+        </Route>
+        <Route exact path="/overview">
+          <Content>
+            <OverviewPage />
+          </Content>
+        </Route>
+        <Route exact path="/spotify/:id">
+          <SpotifyPlaylistInfo />
+        </Route>
       </Switch>
     </Content>
   );
