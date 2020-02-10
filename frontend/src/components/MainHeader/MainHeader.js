@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import SideNavPlaylistMenu from "./SideNavPlaylistMenu";
 
-const TutorialHeader = () => {
+const MainHeader = () => {
   return (
     <>
       <HeaderContainer
@@ -62,18 +62,21 @@ const TutorialHeader = () => {
                   >
                     Last.fm
                   </HeaderMenuItem>
+                  <HeaderMenuItem href="https://open.spotify.com/user/pzq94upt8yfrd6pqsjn9drtr0?si=UMalZ7VtQ-Gkok4sZtoW1A">
+                    Spotify
+                  </HeaderMenuItem>
                   <HeaderMenuItem href="/overview">Overview</HeaderMenuItem>
-                  <HeaderMenu aria-label="Finished" menuLinkName="Finished">
+                  {/*                  <HeaderMenu aria-label="TestMenu" menuLinkName="TestMenu">
                     <HeaderMenuItem element={Link} to="#">
-                      Playlist 1
+                      Test 2
                     </HeaderMenuItem>
                     <HeaderMenuItem element={Link} to="#">
-                      Playlist 2
+                      Test 2
                     </HeaderMenuItem>
                     <HeaderMenuItem element={Link} to="#">
-                      Playlist 3
-                    </HeaderMenuItem>
-                  </HeaderMenu>
+                      Test 3
+                    </HeaderMenuItem> 
+                  </HeaderMenu>*/}
                 </HeaderNavigation>
                 <SideNav
                   aria-label="Side navigation"
@@ -89,18 +92,21 @@ const TutorialHeader = () => {
                       >
                         Last.fm
                       </HeaderMenuItem>
+                      <HeaderMenuItem href="https://open.spotify.com/user/pzq94upt8yfrd6pqsjn9drtr0?si=UMalZ7VtQ-Gkok4sZtoW1A">
+                        Spotify
+                      </HeaderMenuItem>
                       <HeaderMenuItem href="/overview">Overview</HeaderMenuItem>
-                      <HeaderMenu aria-label="Finished" menuLinkName="Finished">
-                        <HeaderMenuItem element={Link} to="#">
-                          Playlist 1
-                        </HeaderMenuItem>
-                        <HeaderMenuItem element={Link} to="#">
-                          Playlist 2
-                        </HeaderMenuItem>
-                        <HeaderMenuItem element={Link} to="#">
-                          Playlist 3
-                        </HeaderMenuItem>
-                      </HeaderMenu>
+                      {/*                  <HeaderMenu aria-label="TestMenu" menuLinkName="TestMenu">
+                    <HeaderMenuItem element={Link} to="#">
+                      Test 2
+                    </HeaderMenuItem>
+                    <HeaderMenuItem element={Link} to="#">
+                      Test 2
+                    </HeaderMenuItem>
+                    <HeaderMenuItem element={Link} to="#">
+                      Test 3
+                    </HeaderMenuItem> 
+                  </HeaderMenu>*/}
                     </HeaderSideNavItems>
 
                     <SideNavPlaylistMenu />
@@ -143,8 +149,8 @@ const EnhancedInformationHeaderGlobalAction = () => {
         <Information20 />
       </HeaderGlobalAction>
       <Modal
-      modalLabel="About"
-      modalHeading="Natural Dissociation"
+        modalLabel="About"
+        modalHeading="Natural Dissociation"
         id="modal1"
         aria-label="modal1"
         open={isModalOpen}
@@ -154,14 +160,23 @@ const EnhancedInformationHeaderGlobalAction = () => {
         <p className={`bx--modal-content__text`}>
           <br />
           <br />
+          {t("Copyright")}
+          <br />
+          <br />
           {t("Version Number")}
           <br />
           <br />
-          {t("Copyright")}
+          Made utilizing the{" "}
+          <a href="https://www.carbondesignsystem.com/">
+            Carbon Design System{" "}
+          </a>
+          <br />
+          <br />
+          {t("Last updated on")}
         </p>
       </Modal>
     </>
   );
 };
 
-export default TutorialHeader;
+export default MainHeader;

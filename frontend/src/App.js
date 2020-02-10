@@ -1,14 +1,14 @@
 import React, { lazy, Suspense } from "react";
 import "./App.scss";
 
-const TutorialHeader = lazy(() => import("./components/TutorialHeader"));
+const MainHeader = lazy(() => import("./components/MainHeader"));
 const Content = lazy(() => import("./components/Content/Content"));
 
 const App = () => {
   return (
     <>
       <Suspense fallback="loading">
-        <TutorialHeader />
+        <MainHeader />
       </Suspense>
       <Suspense fallback="loading">
         <Content />
