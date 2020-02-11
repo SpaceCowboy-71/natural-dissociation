@@ -1,12 +1,10 @@
-
-
 .playlist-image {
   position: absolute;
   object-fit: cover;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  z-index: -1;
+  z-index: -2;
 }
 
 .playlist-info-page__banner {
@@ -16,8 +14,28 @@
   margin-left: 0;
 }
 
+.playlist-info-page__dots {
+  position: fixed;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 16px;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16' xml:space='preserve'%3E%3Crect width='16' fill='none' height='16'/%3E%3Crect x='0' y='0' fill='white' width='1' height='1'/%3E%3C/svg%3E");
+}
+
+.playlist-info-page__filter {
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  opacity: 0.25;
+  background-color: black;
+}
+
 .playlist-info-page__body {
   position: relative;
+  background-color: black;
   padding-left: $spacing-08;
   padding-top: $spacing-06 * 3;
   padding-bottom: $spacing-09;

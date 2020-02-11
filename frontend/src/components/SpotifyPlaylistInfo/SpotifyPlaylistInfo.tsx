@@ -35,18 +35,19 @@ export default function<SpotifyPlaylistInfoProps>(props) {
   const playlist = useSingleSpotifyPlaylist(urlParams.id);
   console.warn("playlist:", playlist);
   const media = usePlaylistImageGetDownloadUrl(urlParams.id);
-  console.warn("media: " + media)
-
-  
+  console.warn("media: " + media);
 
   return (
     <>
       <div className="bx--grid bx--grid--full-width playlist-info-page bx--no-gutter">
+        <span className="playlist-info-page__dots" />
+        <span className="playlist-info-page__filter" />
         <div className="bx--row playlist-info-page__banner bx--no-gutter">
           <div className="bx--col-lg-16 bx-.bx--no-gutter--right">
             <img className="playlist-image" src={media} />
           </div>
         </div>
+
         <div className="bx--row playlist-info-page__body">
           <div className="bx--col-md-4 bx--offset-lg-3 bx--col-lg-5">
             <h2 className="playlist-info-page__heading">{playlist?.title}</h2>
