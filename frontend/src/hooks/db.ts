@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { SpotifyPlaylistMetadata } from "../model/data.types";
 import { getSingleSpotifyPlaylist, getAllSpotifyPlaylists } from "../model/db";
 
+
 /**
  * Fetch all playlists for spotify and return them directly. Returns
  * empty array if no playlists are found or not fetched yet.
@@ -35,3 +36,4 @@ export function useSingleSpotifyPlaylist(id: string) {
 
   return playlist;
 }
+

@@ -26,7 +26,7 @@ export default function() {
             );
           })}
       </SideNavMenu>
-      <SideNavMenu title="Finished">
+      <SideNavMenu title="Finished Playlists">
         {playlists
           .filter(playlist => playlist.category === "finished")
           .map(playlist => {
