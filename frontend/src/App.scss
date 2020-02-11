@@ -17,4 +17,11 @@ html {
   padding-left: 0;
   padding-top: 0;
   padding-bottom: 0;
+  margin-left: 255px;
+}
+//for always collapsed SideNav remove margin-left in .bx--content__master above and the rule below
+@media (max-width: 1056px) {
+  .bx--content__master {
+    margin-left: 0;
+  }
 }
