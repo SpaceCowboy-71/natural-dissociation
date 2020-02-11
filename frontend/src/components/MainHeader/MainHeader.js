@@ -38,6 +38,21 @@ const MainHeader = () => {
             },
             false
           );
+
+          let headerReturnOverlay;
+          if (isSideNavExpanded) {
+            headerReturnOverlay = 
+              <div
+                className="header-return-overlay--active"
+                onClick={
+                  isSideNavExpanded === true ? onClickSideNavExpand : null
+                }
+              />
+            ;
+          } else {
+            headerReturnOverlay = <div className="header-return-overlay--inactive" />;
+          }
+
           return (
             <>
               <Header
@@ -46,6 +61,7 @@ const MainHeader = () => {
                 //  isSideNavExpanded === true ? onClickSideNavExpand : null
                 //}
               >
+                {headerReturnOverlay}
                 <SkipToContent />
                 <HeaderMenuButton
                   aria-label="Open menu"
