@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { SpotifyPlaylistMetadata } from "../model/data.types";
 import { getSingleSpotifyPlaylist, getAllSpotifyPlaylists } from "../model/db";
-
+import firebase from "firebase";
 
 /**
  * Fetch all playlists for spotify and return them directly. Returns
@@ -37,3 +37,53 @@ export function useSingleSpotifyPlaylist(id: string) {
   return playlist;
 }
 
+export function usePlaylistImageGetDownloadUrl(mediaUrl: string) {
+  const [imageUrl, setImageUrl] = useState("");
+  var storage = firebase.storage();
+  var storageRef = storage.ref();
+  var imagesRef = storageRef.child("images");
+  var spaceRef = imagesRef.child(mediaUrl + ".jpg");
+
+  useEffect(() => {
+    spaceRef
+      .getDownloadURL()
+      .then(function(url) {
+        console.warn("Url: " + url);
+        setImageUrl(url);
+      })
+      .catch(function(error) {
+        switch (error.code) {
+          case "storage/invalid-argument":
+            return "NASA.jpg";
+            break;
+            default: 
+            return "NASA.jpg";
+            break;
+        }
+      });
+  });
+
+  return imageUrl;
+}
+
+/*    
+var path = ""; 
+var storage = firebase.storage();
+var storageRef = storage.ref();
+var imagesRef = storageRef.child("images");
+var spaceRef = imagesRef.child("NASA.jpg");
+
+
+
+spaceRef
+  .getDownloadURL()
+  .then(function(url) {
+    // `url` is the download URL for 'images/NASA.jpg'
+
+    console.warn(url)
+    path = url;
+    console.warn("path: " + path)
+  })
+  .catch(function(error) {
+    // Handle any errors
+  });  */
