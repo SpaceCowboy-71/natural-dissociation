@@ -7,11 +7,9 @@
 //
 //
 //
-import firebase from "firebase";
-import React, { memo, ReactNode } from "react";
+import React from "react";
 import { ClickableTile } from "carbon-components-react";
 import ArrowRight20 from "@carbon/icons-react/lib/arrow--right/20";
-import { SpotifyPlaylistMetadata } from "../../model/data.types";
 import { useParams } from "react-router-dom";
 import {
   useSingleSpotifyPlaylist,

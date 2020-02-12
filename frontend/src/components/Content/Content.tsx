@@ -13,7 +13,6 @@ import { Content } from "carbon-components-react/lib/components/UIShell";
 import { Route, Switch } from "react-router-dom";
 import LandingPage from "../LandingPage";
 import OverviewPage from "../OverviewPage";
-import FetchContainer from "../SpotifyPlaylistInfo/FetchContainer";
 import SpotifyPlaylistInfo from "../SpotifyPlaylistInfo/SpotifyPlaylistInfo";
 
 /*

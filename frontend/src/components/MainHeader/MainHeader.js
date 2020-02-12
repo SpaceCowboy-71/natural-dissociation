@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import AppSwitcher20 from "@carbon/icons-react/lib/app-switcher/20";
 import Information20 from "@carbon/icons-react/lib/information/20";
-import UserAvatar20 from "@carbon/icons-react/lib/user--avatar/20";
 import {
   Header,
   HeaderName,
@@ -12,13 +11,11 @@ import {
   SkipToContent,
   HeaderMenuButton,
   HeaderContainer,
-  HeaderMenu,
   SideNav,
   SideNavItems,
   HeaderSideNavItems
 } from "carbon-components-react/lib/components/UIShell";
 import { Modal } from "carbon-components-react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import SideNavPlaylistMenu from "./SideNavPlaylistMenu";
 
@@ -131,9 +128,6 @@ const MainHeader = () => {
                 </SideNav>
                 <HeaderGlobalBar>
                   <EnhancedInformationHeaderGlobalAction />
-                  <HeaderGlobalAction aria-label="User Avatar">
-                    <UserAvatar20 />
-                  </HeaderGlobalAction>
                   <HeaderGlobalAction aria-label="App Switcher">
                     <AppSwitcher20 />
                   </HeaderGlobalAction>

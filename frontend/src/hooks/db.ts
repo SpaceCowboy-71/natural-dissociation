@@ -53,12 +53,11 @@ export function usePlaylistImageGetDownloadUrl(mediaUrl: string) {
       })
       .catch(function(error) {
         switch (error.code) {
+          //doesn't work
           case "storage/invalid-argument":
             return "NASA.jpg";
-            break;
             default: 
             return "NASA.jpg";
-            break;
         }
       });
   });

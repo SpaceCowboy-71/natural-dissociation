@@ -1,5 +1,4 @@
 import React from 'react';
-import { ModalWrapper } from 'carbon-components-react';
 
 const OverviewPage = () => {
   return (

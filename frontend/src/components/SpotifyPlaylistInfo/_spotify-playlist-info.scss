@@ -68,17 +68,20 @@
   min-height: 0;
   max-width: 300px;
   max-height: 160px;
+  -webkit-text-fill-color: #f4f4f4;
+}
+
+.playlist-tile-spotify:hover {
+  text-decoration: none;
 }
 
 .playlist-tile-spotify-title {
   @include carbon--type-style("productive-heading-03");
-  -webkit-text-fill-color: #f4f4f4;
 }
 
 .playlist-tile-spotify-subtitle {
   @include carbon--type-style("expressive-heading-01");
   @include carbon--font-weight("light");
-  -webkit-text-fill-color: #f4f4f4;
 }
 
 .playlist-tile-spotify-icon {
