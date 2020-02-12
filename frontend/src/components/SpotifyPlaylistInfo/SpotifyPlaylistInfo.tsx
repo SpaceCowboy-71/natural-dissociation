@@ -10,6 +10,7 @@
 import firebase from "firebase";
 import React, { memo, ReactNode } from "react";
 import { ClickableTile } from "carbon-components-react";
+import ArrowRight20 from "@carbon/icons-react/lib/arrow--right/20";
 import { SpotifyPlaylistMetadata } from "../../model/data.types";
 import { useParams } from "react-router-dom";
 import {
@@ -46,12 +47,14 @@ export default function<SpotifyPlaylistInfoProps>(props) {
         <div className="bx--row playlist-info-page__banner bx--no-gutter">
           <div className="bx--col-lg-16 bx-.bx--no-gutter--right">
             <img className="playlist-image" src={media} />
-            <div className="playlist-tile-container bx--col-lg-4 bx--offset-lg-8 bx--col-md-3 bx--offset-md-4 bx--col-sm-2 bx--offset-sm-2">
+            <div className="playlist-tile-container bx--col-lg-4 bx--offset-lg-9 bx--col-md-3 bx--offset-md-4 bx--col-sm-2 bx--offset-sm-2">
               <ClickableTile
                 className="playlist-tile-spotify"
                 href={playlist?.spotify.playlistUrl}
               >
-                Clickable
+                <h5 className="playlist-tile-spotify-subtitle">Spotify</h5>
+                <h4 className="playlist-tile-spotify-title">Go to Playlist</h4>
+                <ArrowRight20 className="playlist-tile-spotify-icon" />
               </ClickableTile>
             </div>
           </div>
