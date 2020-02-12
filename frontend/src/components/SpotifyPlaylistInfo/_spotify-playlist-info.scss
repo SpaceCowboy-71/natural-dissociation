@@ -75,6 +75,10 @@
   text-decoration: none;
 }
 
+.playlist-tile-spotify:active {
+  text-decoration: none;
+}
+
 .playlist-tile-spotify-title {
   @include carbon--type-style("productive-heading-03");
 }

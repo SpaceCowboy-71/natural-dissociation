@@ -44,7 +44,7 @@ export default function<SpotifyPlaylistInfoProps>(props) {
         <span className="playlist-info-page__filter" />
         <div className="bx--row playlist-info-page__banner bx--no-gutter">
           <div className="bx--col-lg-16 bx-.bx--no-gutter--right">
-            <img className="playlist-image" src={media} />
+            <img className="playlist-image" src={media} alt="" />
             <div className="playlist-tile-container bx--col-lg-4 bx--offset-lg-9 bx--col-md-3 bx--offset-md-4 bx--col-sm-2 bx--offset-sm-2">
               <ClickableTile
                 className="playlist-tile-spotify"

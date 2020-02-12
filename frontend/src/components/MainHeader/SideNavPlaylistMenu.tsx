@@ -10,7 +10,7 @@ export default function() {
 
   return (
     <>
-      <SideNavMenu title="Collections">
+      <SideNavMenu title="Collections" defaultExpanded={true} >
         {playlists
           .filter(playlist => playlist.category === "collection")
           .map(playlist => {
@@ -24,7 +24,7 @@ export default function() {
             );
           })}
       </SideNavMenu>
-      <SideNavMenu title="Finished Playlists">
+      <SideNavMenu title="Finished Playlists" defaultExpanded={true} >
         {playlists
           .filter(playlist => playlist.category === "finished")
           .map(playlist => {
