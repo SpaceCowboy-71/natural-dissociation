@@ -33,6 +33,10 @@
   -webkit-text-fill-color: #bebebe;
 }
 
+.bx--side-nav__item {
+  padding-top: $spacing-03;
+}
+
 .bx--header__menu-item {
   -webkit-text-fill-color: #bebebe;
 }
@@ -83,15 +87,29 @@
   -webkit-text-fill-color: #bebebe;
 }
 
-.header-return-overlay--active{
+.header-return-overlay--active {
   width: 100%;
-  height: 200vh; 
+  height: 200vh;
   position: absolute;
   z-index: 10;
   margin-left: 255px;
 }
 
-.header-return-overlay--inactive{
+.header-return-overlay--inactive {
   width: 0;
-  height: 0; 
+  height: 0;
+}
+
+.side-nav__divider {
+  display: block;
+  margin: 2rem 1rem 0;
+  border-style: solid;
+  border-bottom: none;
+  border-color: #393939;
+}
+
+.header-icon__external {
+  fill: #f4f4f4;
+  width: 12px;
+  padding: 2px;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import AppSwitcher20 from "@carbon/icons-react/lib/app-switcher/20";
 import Information20 from "@carbon/icons-react/lib/information/20";
+import Launch16 from "@carbon/icons-react/lib/launch/16";
 import {
   Header,
   HeaderName,
@@ -68,17 +69,17 @@ const MainHeader = () => {
                   Dissociation
                 </HeaderName>
                 <HeaderNavigation aria-label="Natural Dissociation">
-                  <HeaderMenuItem
-                    href="https://www.last.fm/de/user/SpaceUlysses"
-                    target="_blank"
-                  >
+                  <HeaderMenuItem href="https://www.last.fm/de/user/SpaceUlysses">
                     Last.fm
+                    <Launch16 className="header-icon__external" />
                   </HeaderMenuItem>
                   <HeaderMenuItem href="https://open.spotify.com/user/pzq94upt8yfrd6pqsjn9drtr0?si=UMalZ7VtQ-Gkok4sZtoW1A">
                     Spotify
+                    <Launch16 className="header-icon__external" />
                   </HeaderMenuItem>
                   <HeaderMenuItem href="/overview">Overview</HeaderMenuItem>
                 </HeaderNavigation>
+
                 <SideNav
                   aria-label="Side navigation"
                   expanded={isSideNavExpanded}
@@ -88,32 +89,28 @@ const MainHeader = () => {
                 >
                   <SideNavItems>
                     <HeaderSideNavItems>
-                      <HeaderMenuItem
-                        href="https://www.last.fm/de/user/SpaceUlysses"
-                        target="_blank"
-                      >
+                      <HeaderMenuItem href="https://www.last.fm/de/user/SpaceUlysses">
                         Last.fm
+                        <Launch16 className="header-icon__external" />
                       </HeaderMenuItem>
                       <HeaderMenuItem href="https://open.spotify.com/user/pzq94upt8yfrd6pqsjn9drtr0?si=UMalZ7VtQ-Gkok4sZtoW1A">
                         Spotify
+                        <Launch16
+                          className="header-icon__external"
+                          style={{
+                            fill: "#f4f4f4",
+                            width: "12px",
+                            padding: "2px"
+                          }}
+                        />
                       </HeaderMenuItem>
                       <HeaderMenuItem href="/overview">Overview</HeaderMenuItem>
-                      {/*                  <HeaderMenu aria-label="TestMenu" menuLinkName="TestMenu">
-                    <HeaderMenuItem element={Link} to="#">
-                      Test 2
-                    </HeaderMenuItem>
-                    <HeaderMenuItem element={Link} to="#">
-                      Test 2
-                    </HeaderMenuItem>
-                    <HeaderMenuItem element={Link} to="#">
-                      Test 3
-                    </HeaderMenuItem> 
-                  </HeaderMenu>*/}
+                      <hr className="side-nav__divider"></hr>
                     </HeaderSideNavItems>
-
                     <SideNavPlaylistMenu />
                   </SideNavItems>
                 </SideNav>
+
                 <HeaderGlobalBar>
                   <EnhancedInformationHeaderGlobalAction />
                   <HeaderGlobalAction aria-label="App Switcher">
@@ -164,7 +161,9 @@ const EnhancedInformationHeaderGlobalAction = () => {
           <br />
           {t("Copyright")}
           <br />
-          <a href="mailto:natural.dissociation@gmail.com" >natural.dissociation@gmail.com</a>
+          <a href="mailto:natural.dissociation@gmail.com">
+            natural.dissociation@gmail.com
+          </a>
           <br />
           <br />
           Made utilizing the{" "}
