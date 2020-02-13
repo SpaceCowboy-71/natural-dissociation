@@ -9,6 +9,7 @@ import {
   UnorderedList
 } from "carbon-components-react";
 import logo from "./tab-illo.png";
+import LL from "./LL.svg";
 import { useTranslation } from "react-i18next";
 
 const props = {
@@ -63,7 +64,7 @@ const LandingPage = () => {
                     <img
                       className="landing-page__illo"
                       src={logo}
-                      alt="Carbon illustration"
+                      alt="Carbon Illustration"
                     />
                   </div>
                 </div>
@@ -127,12 +128,13 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="bx--row landing-page__r3">
-        <div className="bx--col-md-4 bx--col-lg-4">
+        <img className="LL" src={LL} alt="Carbon Illustration" />
+        {/* <div className="bx--col-md-4 bx--col-lg-4">
           <h3 className="landing-page__label">The Principles</h3>
         </div>
         <div className="bx--col-md-4 bx--col-lg-4">Carbon is Open</div>
         <div className="bx--col-md-4 bx--col-lg-4">Carbon is Modular</div>
-        <div className="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div>
+        <div className="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div> */}
       </div>
     </div>
   );

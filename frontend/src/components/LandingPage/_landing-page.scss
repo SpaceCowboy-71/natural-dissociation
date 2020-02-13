@@ -34,8 +34,6 @@
   }
 }
 .landing-page__r3 {
-  padding-top: $spacing-07;
-  padding-bottom: $spacing-07;
   @include landing-page-background;
 }
 
@@ -51,4 +49,13 @@
 
 .landing-page-list__item {
   margin-bottom: $spacing-07;
+}
+
+.LL {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+  width: 100%;
+  height: 150px;
+  @include carbon--breakpoint-between((0px + 1), 70rem) {
+    height: 90px;
+  }
 }
