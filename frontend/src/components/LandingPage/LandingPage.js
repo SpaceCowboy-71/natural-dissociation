@@ -9,7 +9,7 @@ import {
   UnorderedList
 } from "carbon-components-react";
 import logo from "./tab-illo.png";
-import LL from "./LL.svg";
+import WaveformLLLarge from "./Images/LL.svg";
 import { useTranslation } from "react-i18next";
 
 const props = {
@@ -103,7 +103,7 @@ const LandingPage = () => {
             <Tab {...props.tab} label="The Name">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
-                  <div className="bx--col-lg-8 bx--col-md-6">
+                  <div className="bx--col-lg-9 bx--col-md-6">
                     <h2 className="landing-page__subheading">
                       / Natural / Dissociation /
                     </h2>
@@ -113,7 +113,7 @@ const LandingPage = () => {
                       magna aliquyam erat, sed diam voluptua. At vero eos et
                       accusam et justo duo dolores et ea rebum. Stet clita kasd
                       gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                      sit amet. Lorem ipsum dolor sit amet, consetetur
+                      sit amet. <br /> Lorem ipsum dolor sit amet, consetetur
                       sadipscing elitr, sed diam nonumy eirmod tempor invidunt
                       ut labore et dolore magna aliquyam erat, sed diam
                       voluptua. At vero eos et accusam et justo duo dolores et
@@ -128,7 +128,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="bx--row landing-page__r3">
-        <img className="LL" src={LL} alt="Carbon Illustration" />
+        <img className="landing-page__waveform" src={WaveformLLLarge} alt="Carbon Illustration" />
         {/* <div className="bx--col-md-4 bx--col-lg-4">
           <h3 className="landing-page__label">The Principles</h3>
         </div>
