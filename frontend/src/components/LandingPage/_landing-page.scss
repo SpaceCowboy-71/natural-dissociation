@@ -30,7 +30,7 @@
   margin-top: $spacing-06;
   margin-bottom: $spacing-08;
   @include carbon--breakpoint-between((320px + 1), md) {
-    max-width: 75%;
+    max-width: 80%;
   }
 }
 .landing-page__r3 {
@@ -41,4 +41,14 @@
 
 .landing-page__label {
   @include carbon--type-style("heading-01");
+}
+
+.landing-page-list {
+  margin-top: $spacing-08;
+  margin-bottom: $spacing-08;
+  @include carbon--type-style("productive-heading-03");
+}
+
+.landing-page-list__item {
+  margin-bottom: $spacing-07;
 }

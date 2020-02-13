@@ -8,7 +8,6 @@ import {
   HeaderMenuItem,
   HeaderGlobalAction,
   HeaderGlobalBar,
-  SkipToContent,
   HeaderMenuButton,
   HeaderContainer,
   SideNav,
@@ -79,17 +78,6 @@ const MainHeader = () => {
                     Spotify
                   </HeaderMenuItem>
                   <HeaderMenuItem href="/overview">Overview</HeaderMenuItem>
-                  {/*                  <HeaderMenu aria-label="TestMenu" menuLinkName="TestMenu">
-                    <HeaderMenuItem element={Link} to="#">
-                      Test 2
-                    </HeaderMenuItem>
-                    <HeaderMenuItem element={Link} to="#">
-                      Test 2
-                    </HeaderMenuItem>
-                    <HeaderMenuItem element={Link} to="#">
-                      Test 3
-                    </HeaderMenuItem> 
-                  </HeaderMenu>*/}
                 </HeaderNavigation>
                 <SideNav
                   aria-label="Side navigation"
@@ -175,6 +163,8 @@ const EnhancedInformationHeaderGlobalAction = () => {
           <br />
           <br />
           {t("Copyright")}
+          <br />
+          <a href="mailto:natural.dissociation@gmail.com" >natural.dissociation@gmail.com</a>
           <br />
           <br />
           Made utilizing the{" "}

@@ -4,7 +4,9 @@ import {
   BreadcrumbItem,
   Button,
   Tabs,
-  Tab
+  Tab,
+  ListItem,
+  UnorderedList
 } from "carbon-components-react";
 import logo from "./tab-illo.png";
 import { useTranslation } from "react-i18next";
@@ -70,9 +72,29 @@ const LandingPage = () => {
             <Tab {...props.tab} label="The Playlists">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
-                  <div className="bx--col-lg-16">
-                    Rapidly build beautiful and accessible experiences. The
-                    Carbon kit contains all resources you need to get started.
+                  <div className="bx--col-lg-10 bx--col-md-6 ">
+                    <h2 className="landing-page__subheading">
+                      The playlists presented on this site are split into three
+                      categories:
+                    </h2>
+                    <UnorderedList className="landing-page-list">
+                      <ListItem className="landing-page-list__item">
+                        <strong>{"Collections: "}</strong>Malis bonorum ut ius.
+                        In vel offendit inimicus expetendis, signiferumque
+                        vituperatoribus id vis, est modo ubique te. Nonumes
+                        omittantur voluptatibus.
+                      </ListItem>
+                      <ListItem className="landing-page-list__item">
+                        <strong>{"Finished playlists: "}</strong>Lorem ipsum
+                        dolor sit amet, has ex maiorum propriae scaevola. Duo eu
+                        placerat mediocrem, ad mea consul fabellas legendos ne.
+                      </ListItem>
+                      <ListItem className="landing-page-list__item">
+                        <strong>{"WIP-playlists: "}</strong>Virtute vulputate
+                        his an, ut assum epicuri mei. Dico eligendi ullamcorper
+                        ea duo. Erat saepe erroribus in sit, ex eius.
+                      </ListItem>
+                    </UnorderedList>
                   </div>
                 </div>
               </div>
@@ -80,9 +102,23 @@ const LandingPage = () => {
             <Tab {...props.tab} label="The Name">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
-                  <div className="bx--col-lg-16">
-                    Carbon provides styles and components in Vanilla, React,
-                    Angular, and Vue for anyone building on the web.
+                  <div className="bx--col-lg-8 bx--col-md-6">
+                    <h2 className="landing-page__subheading">
+                      / Natural / Dissociation /
+                    </h2>
+                    <p className="landing-page__p">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                      magna aliquyam erat, sed diam voluptua. At vero eos et
+                      accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                      sit amet. Lorem ipsum dolor sit amet, consetetur
+                      sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                      ut labore et dolore magna aliquyam erat, sed diam
+                      voluptua. At vero eos et accusam et justo duo dolores et
+                      ea rebum. Stet clita kasd gubergren, no sea takimata
+                      sanctus est Lorem ipsum dolor sit amet.
+                    </p>
                   </div>
                 </div>
               </div>
