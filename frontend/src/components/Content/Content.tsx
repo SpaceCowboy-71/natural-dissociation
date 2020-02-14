@@ -31,9 +31,7 @@ export default () => {
           </Content>
         </Route>
         <Route exact path="/overview">
-          <Content>
-            <OverviewPage />
-          </Content>
+          <OverviewPage />
         </Route>
         <Route exact path="/spotify/:id">
           <SpotifyPlaylistInfo />

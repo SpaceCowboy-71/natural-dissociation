@@ -15,7 +15,7 @@ import {
   SideNavItems,
   HeaderSideNavItems
 } from "carbon-components-react/lib/components/UIShell";
-import { Modal } from "carbon-components-react";
+import { Modal, Link } from "carbon-components-react";
 import { useTranslation } from "react-i18next";
 import SideNavPlaylistMenu from "./SideNavPlaylistMenu";
 
@@ -172,15 +172,15 @@ const EnhancedInformationHeaderGlobalAction = () => {
           <br />
           {t("Copyright")}
           <br />
-          <a href="mailto:natural.dissociation@gmail.com">
+          <Link href="mailto:natural.dissociation@gmail.com">
             natural.dissociation@gmail.com
-          </a>
+          </Link>
           <br />
           <br />
           Made utilizing the{" "}
-          <a href="https://www.carbondesignsystem.com/">
+          <Link href="https://www.carbondesignsystem.com/">
             Carbon Design System{" "}
-          </a>
+          </Link>
           <br />
           <br />
           {t("Last updated on")}
