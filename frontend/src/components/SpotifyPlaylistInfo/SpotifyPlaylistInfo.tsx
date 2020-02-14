@@ -48,7 +48,7 @@ export default function<SpotifyPlaylistInfoProps>(props) {
             <div className="playlist-tile-container bx--col-lg-4 bx--offset-lg-9 bx--col-md-3 bx--offset-md-4 bx--col-sm-2 bx--offset-sm-2">
               <ClickableTile
                 className="playlist-tile-spotify"
-                href={playlist?.spotify.playlistUrl}
+                href={playlist?.playlistUrl}
               >
                 <h5 className="playlist-tile-spotify-subtitle">Spotify</h5>
                 <h4 className="playlist-tile-spotify-title">Go to Playlist</h4>

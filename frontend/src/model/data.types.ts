@@ -2,8 +2,6 @@ export interface SpotifyPlaylistMetadata {
   id: string;
   title: string;
   description: string;
-  spotify: {
-    playlistUrl: string;
-  };
+  playlistUrl: string;
   category: string;
 }
