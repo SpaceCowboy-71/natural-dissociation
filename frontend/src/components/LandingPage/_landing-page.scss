@@ -59,7 +59,7 @@
     height: 90px;
   }
   @include carbon--breakpoint-between(0, 32rem) {
-    content: url("./Images/LF_sm.svg"); 
+    content: url("./Images/LF_sm.svg");
   }
   @include carbon--breakpoint-between(32rem, 60rem) {
     content: url("./Images/LF_md.svg");

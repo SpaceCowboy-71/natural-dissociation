@@ -35,6 +35,23 @@ const MainHeader = () => {
             },
             false
           );
+
+          let headerExtendOverlay;
+          if (isSideNavExpanded) {
+            headerExtendOverlay = (
+              <div className="header-extend-overlay--inactive" />
+            );
+          } else {
+            headerExtendOverlay = (
+              <div
+                className="header-extend-overlay--active"
+                onClick={
+                  isSideNavExpanded === false ? onClickSideNavExpand : null
+                }
+              />
+            );
+          }
+
           let headerReturnOverlay;
           if (isSideNavExpanded) {
             headerReturnOverlay = (
@@ -59,6 +76,7 @@ const MainHeader = () => {
                 //  isSideNavExpanded === true ? onClickSideNavExpand : null
                 //}
               >
+                {headerExtendOverlay}
                 {headerReturnOverlay}
                 <HeaderMenuButton
                   aria-label="Open menu"
@@ -95,14 +113,7 @@ const MainHeader = () => {
                       </HeaderMenuItem>
                       <HeaderMenuItem href="https://open.spotify.com/user/pzq94upt8yfrd6pqsjn9drtr0?si=UMalZ7VtQ-Gkok4sZtoW1A">
                         Spotify
-                        <Launch16
-                          className="header-icon__external"
-                          style={{
-                            fill: "#f4f4f4",
-                            width: "12px",
-                            padding: "2px"
-                          }}
-                        />
+                        <Launch16 className="header-icon__external" />
                       </HeaderMenuItem>
                       <HeaderMenuItem href="/overview">Overview</HeaderMenuItem>
                       <hr className="side-nav__divider"></hr>
