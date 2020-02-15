@@ -4,4 +4,10 @@ export interface SpotifyPlaylistMetadata {
   description: string;
   playlistUrl: string;
   category: string;
+  tags: SpotifyPlaylistTag[];
+}
+
+export enum SpotifyPlaylistTag {
+  Disco = "Disco", 
+  Summer ="Summer"
 }

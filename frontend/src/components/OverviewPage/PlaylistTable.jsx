@@ -10,8 +10,14 @@ import {
   TableBody,
   TableExpandRow,
   TableCell,
-  TableExpandedRow
+  TableExpandedRow,
+  TableToolbar,
+  TableToolbarSearch,
+  TableToolbarMenu,
+  TableToolbarAction,
+  Checkbox
 } from "carbon-components-react";
+import Filter16 from "@carbon/icons-react/lib/filter/16";
 
 const PlaylistTable = ({ rows, headers }) => {
   const getRowDescription = rowId => {
@@ -27,12 +33,29 @@ const PlaylistTable = ({ rows, headers }) => {
         headers,
         getHeaderProps,
         getRowProps,
-        getTableProps
+        getTableProps,
+        onInputChange
       }) => (
         <TableContainer
           title="Carbon Repositories"
           description="A collection of public Carbon repositories."
         >
+          <TableToolbar>
+            <TableToolbarSearch expanded onChange={onInputChange} />
+            <TableToolbarMenu iconDescription="Mot" renderIcon={Filter16}>
+              {/* <TableToolbarAction>Massl</TableToolbarAction> */}
+              <div style={{ padding: 10 }}>
+                <fieldset>
+                  <legend>Category</legend>
+                  <Checkbox labelText="Motam" id="checkbox-label-1" />
+                  <Checkbox labelText="Thomasina" id="checkbox-label-2" />
+                  <legend>Tags</legend>
+                  <Checkbox labelText="Motam" id="checkbox-label-3" />
+                  <Checkbox labelText="Thomasina" id="checkbox-label-4" />
+                </fieldset>
+              </div>
+            </TableToolbarMenu>
+          </TableToolbar>
           <Table {...getTableProps()}>
             <TableHead>
               <TableRow>

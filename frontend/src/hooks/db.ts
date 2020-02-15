@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { SpotifyPlaylistMetadata } from "../model/data.types";
+import { SpotifyPlaylistMetadata } from "../model/playlist";
 import { getSingleSpotifyPlaylist, getAllSpotifyPlaylists } from "../model/db";
 import firebase from "firebase";
 
@@ -37,14 +37,19 @@ export function useSingleSpotifyPlaylist(id: string) {
   return playlist;
 }
 
-export function usePlaylistImageGetDownloadUrl(mediaUrl: string) {
+export function usePlaylistImageGetDownloadUrl(mediaUrl?: string) {
   const [imageUrl, setImageUrl] = useState("");
-  var storage = firebase.storage();
-  var storageRef = storage.ref();
-  var imagesRef = storageRef.child("images");
-  var spaceRef = imagesRef.child(mediaUrl + ".jpg");
 
   useEffect(() => {
+    if (!mediaUrl) {
+      return;
+    }
+
+    const storage = firebase.storage();
+    const storageRef = storage.ref();
+    const imagesRef = storageRef.child("images");
+    const spaceRef = imagesRef.child(mediaUrl + ".jpg");
+
     spaceRef
       .getDownloadURL()
       .then(function(url) {
@@ -56,11 +61,11 @@ export function usePlaylistImageGetDownloadUrl(mediaUrl: string) {
           //doesn't work
           case "storage/invalid-argument":
             return "NASA.jpg";
-            default: 
+          default:
             return "NASA.jpg";
         }
       });
-  });
+  }, [mediaUrl]);
 
   return imageUrl;
 }

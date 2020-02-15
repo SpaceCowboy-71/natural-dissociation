@@ -34,7 +34,7 @@ export default function<SpotifyPlaylistInfoProps>(props) {
   const urlParams = useParams<{ id: string }>();
   const playlist = useSingleSpotifyPlaylist(urlParams.id);
   console.warn("playlist:", playlist);
-  const media = usePlaylistImageGetDownloadUrl(urlParams.id);
+  const media = usePlaylistImageGetDownloadUrl(playlist?.id);
   console.warn("media: " + media);
 
   return (

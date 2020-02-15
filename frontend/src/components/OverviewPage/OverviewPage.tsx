@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import PlaylistTable from "./PlaylistTable.js";
+import PlaylistTable from "./PlaylistTable";
 import { useAllSpotifyPlaylists } from "../../hooks/db";
 import { Pagination, Link } from "carbon-components-react";
+import { SpotifyPlaylistMetadata } from "../../model/playlist";
 
 const headers = [
   {
@@ -15,6 +16,10 @@ const headers = [
   {
     key: "category",
     header: "Category"
+  },
+  {
+    key: "tags",
+    header: "Tags"
   }
 ];
 
@@ -24,8 +29,9 @@ const OverviewPage = () => {
   const [currentPageSize, setCurrentPageSize] = useState(10);
   //setTotalItems(useAllSpotifyPlaylists().length);
   //const rows = useAllSpotifyPlaylists();
-  const rows = getRowItems(useAllSpotifyPlaylists());
-  const totalItems = useAllSpotifyPlaylists().length;
+  const allPlaylists = useAllSpotifyPlaylists();
+  const rows = getRowItems(allPlaylists);
+  const totalItems = allPlaylists.length;
 
   return (
     <div className="bx--grid bx--no-gutter overview-page-main-container">
@@ -66,7 +72,7 @@ const LinkList = ({ id, playlistUrl }) => (
   </ul>
 );
 
-const getRowItems = rows =>
+const getRowItems = (rows: SpotifyPlaylistMetadata[]) =>
   rows.map(row => ({
     ...row,
     //key: row.id,
@@ -74,7 +80,8 @@ const getRowItems = rows =>
     title: row.title,
     description: row.description,
     playlistUrl: <LinkList id={row.id} playlistUrl={row.playlistUrl} />,
-    category: row.category
+    category: row.category,
+    tags: row.tags.join(", ")
   }));
 
 export default OverviewPage;

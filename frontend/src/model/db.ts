@@ -1,6 +1,6 @@
 import firebase from "firebase";
 import config from "../config.fire.json";
-import { SpotifyPlaylistMetadata } from "./data.types.js";
+import { SpotifyPlaylistMetadata } from "./playlist.js";
 
 firebase.initializeApp(config);
 
