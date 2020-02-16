@@ -38,6 +38,7 @@ const OverviewPage = () => {
       <PlaylistTable
         headers={headers}
         rows={rows.slice(firstRowIndex, firstRowIndex + currentPageSize)}
+        allPlaylists={allPlaylists}
       />
       <Pagination
         className="overview-page-datatable-pagination"
