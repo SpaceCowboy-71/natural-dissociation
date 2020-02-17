@@ -59,13 +59,16 @@ const PlaylistTable = (props: {
       })}
       headers={headers}
       render={({ rows, headers, getHeaderProps, getRowProps, getTableProps, onInputChange }) => (
-        <TableContainer title="Carbon Repositories" description="A collection of public Carbon repositories.">
+        <TableContainer
+          title="Playlist Overview"
+          description="Use the search and filter functions to find your favorite playlists"
+        >
           <TableToolbar>
             {
               // @ts-ignore
-              <TableToolbarSearch expanded onChange={onInputChange} />
+              <TableToolbarSearch placeHolderText="Search table" expanded onChange={onInputChange} />
             }
-            <TableToolbarMenu iconDescription="Mot" renderIcon={Filter16}>
+            <TableToolbarMenu iconDescription="Filter" renderIcon={Filter16}>
               <Checkboxes
                 allPlaylists={allPlaylists}
                 checkedCategories={checkedCategories}
@@ -126,7 +129,7 @@ const Checkboxes = (props: {
   return (
     <div style={{ padding: 10 }}>
       <fieldset>
-        <legend>Category</legend>
+        <legend className="playlist-table-legend">Category</legend>
         {categories.map(category => {
           return (
             <Checkbox
@@ -148,7 +151,7 @@ const Checkboxes = (props: {
             />
           );
         })}
-        <legend>Tags</legend>
+        <legend className="playlist-table-legend">Tags</legend>
         {tags.map(tag => {
           return (
             <Checkbox

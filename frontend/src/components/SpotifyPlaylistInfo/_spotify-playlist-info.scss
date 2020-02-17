@@ -92,6 +92,7 @@
 .playlist-info-page__p {
   @include carbon--type-style("productive-heading-04");
   @include carbon--font-weight("light");
+  padding-bottom: $spacing-06;
 }
 
 .playlist-tile-container {
@@ -134,4 +135,8 @@
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+}
+
+.playlist-info-tag{
+  font-size: 0.9rem;
 }
