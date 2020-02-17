@@ -82,7 +82,7 @@ const getRowItems = (rows: SpotifyPlaylistMetadata[]) =>
     description: row.description,
     playlistUrl: <LinkList id={row.id} playlistUrl={row.playlistUrl} />,
     category: row.category,
-    tags: row.tags.join(", ")
+    tags: row.tags.sort().join(", ")
   }));
 
 export default OverviewPage;

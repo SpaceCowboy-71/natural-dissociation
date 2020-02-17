@@ -60,7 +60,7 @@ export default function<SpotifyPlaylistInfoProps>(props) {
           <div className="bx--col-md-4  bx--col-lg-8">
             <p className="playlist-info-page__p">{playlist?.description}</p>
             {/* <Tags tags={playlist?.tags} /> */}
-            {playlist?.tags.map((tag, index) => {
+            {playlist?.tags.sort().map((tag, index) => {
               var type: TagTypeName;
               switch (index) {
                 case 0:
