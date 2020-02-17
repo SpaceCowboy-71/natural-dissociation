@@ -47,11 +47,13 @@ const PlaylistTable = (props: {
         }
         if (
           checkedTags.length > 0 &&
-          !checkedTags.some(tag => {
+          !checkedTags.every(tag => {
             return row.tags.includes(tag);
           })
         ) {
+
           //Use !checkedTags.every(...) to filter only if it contains all
+          //Use !checkedTags.some(...) to filter if it contains atleast one item
           return false;
         }
 
@@ -152,7 +154,7 @@ const Checkboxes = (props: {
           );
         })}
         <legend className="playlist-table-legend">Tags</legend>
-        {tags.map(tag => {
+        {tags.sort().map(tag => {
           return (
             <Checkbox
               onChange={isChecked => {
