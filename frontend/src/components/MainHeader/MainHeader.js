@@ -27,8 +27,7 @@ const MainHeader = () => {
           window.addEventListener(
             "resize",
             () => {
-              const viewportWidth =
-                window.innerWidth || document.documentElement.clientWidth;
+              const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
               if (viewportWidth > 1056) {
                 if (isSideNavExpanded === true) onClickSideNavExpand();
               }
@@ -38,16 +37,12 @@ const MainHeader = () => {
 
           let headerExtendOverlay;
           if (isSideNavExpanded) {
-            headerExtendOverlay = (
-              <div className="header-extend-overlay--inactive" />
-            );
+            headerExtendOverlay = <div className="header-extend-overlay--inactive" />;
           } else {
             headerExtendOverlay = (
               <div
                 className="header-extend-overlay--active"
-                onClick={
-                  isSideNavExpanded === false ? onClickSideNavExpand : null
-                }
+                onClick={isSideNavExpanded === false ? onClickSideNavExpand : null}
               />
             );
           }
@@ -55,17 +50,10 @@ const MainHeader = () => {
           let headerReturnOverlay;
           if (isSideNavExpanded) {
             headerReturnOverlay = (
-              <div
-                className="header-return-overlay--active"
-                onClick={
-                  isSideNavExpanded === true ? onClickSideNavExpand : null
-                }
-              />
+              <div className="header-return-overlay--active" onClick={isSideNavExpanded === true ? onClickSideNavExpand : null} />
             );
           } else {
-            headerReturnOverlay = (
-              <div className="header-return-overlay--inactive" />
-            );
+            headerReturnOverlay = <div className="header-return-overlay--inactive" />;
           }
 
           return (
@@ -78,11 +66,7 @@ const MainHeader = () => {
               >
                 {headerExtendOverlay}
                 {headerReturnOverlay}
-                <HeaderMenuButton
-                  aria-label="Open menu"
-                  onClick={onClickSideNavExpand}
-                  isActive={isSideNavExpanded}
-                />
+                <HeaderMenuButton aria-label="Open menu" onClick={onClickSideNavExpand} isActive={isSideNavExpanded} />
                 <HeaderName href="/" prefix="Natural">
                   Dissociation
                 </HeaderName>
@@ -140,14 +124,8 @@ const MainHeader = () => {
 const EnhancedInformationHeaderGlobalAction = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = useCallback(() => setIsModalOpen(!isModalOpen), [
-    setIsModalOpen,
-    isModalOpen
-  ]);
-  const closeModal = useCallback(() => setIsModalOpen(!isModalOpen), [
-    setIsModalOpen,
-    isModalOpen
-  ]);
+  const openModal = useCallback(() => setIsModalOpen(!isModalOpen), [setIsModalOpen, isModalOpen]);
+  const closeModal = useCallback(() => setIsModalOpen(!isModalOpen), [setIsModalOpen, isModalOpen]);
 
   const { t } = useTranslation();
   return (
@@ -172,15 +150,12 @@ const EnhancedInformationHeaderGlobalAction = () => {
           <br />
           {t("Copyright")}
           <br />
-          <Link href="mailto:natural.dissociation@gmail.com">
-            natural.dissociation@gmail.com
-          </Link>
+          <Link href="mailto:natural.dissociation@gmail.com">natural.dissociation@gmail.com</Link>
           <br />
           <br />
-          Made utilizing the{" "}
-          <Link href="https://www.carbondesignsystem.com/">
-            Carbon Design System{" "}
-          </Link>
+          Made utilizing the <Link href="https://www.carbondesignsystem.com/">Carbon Design System</Link>
+          <br />
+          Footer made with <Link href="https://www.misha.studio/waveformer/">Waveformer</Link>
           <br />
           <br />
           {t("Last updated on")}

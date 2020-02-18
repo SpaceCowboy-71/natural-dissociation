@@ -25,3 +25,18 @@ html {
     margin-left: 0;
   }
 }
+
+.bx--inline-notification {
+  position: fixed;
+  bottom: 0;
+  z-index: 6001;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  -webkit-text-fill-color: #f4f4f4;
+  background-color: #4c4c4c;
+}
+
+.bx--inline-notification__action-button.bx--btn--ghost:hover {
+  background-color: #353535;
+}
