@@ -137,6 +137,10 @@
   right: 1rem;
 }
 
-.playlist-info-tag{
+.playlist-info-tag {
   font-size: 0.9rem;
+}
+
+.bx--tag:not(:first-child) {
+  margin-left: 1px;
 }

@@ -1,6 +1,6 @@
 {
   "name": "natural-dissociation",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "dependencies": {
     "@carbon/grid": "^10.8.3",
