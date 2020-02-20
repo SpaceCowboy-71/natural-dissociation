@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  SideNavMenu,
-  SideNavMenuItem
-} from "carbon-components-react/lib/components/UIShell";
+import { SideNavMenu, SideNavMenuItem } from "carbon-components-react/lib/components/UIShell";
 import { useAllSpotifyPlaylists } from "../../hooks/db";
 
 export default function() {
@@ -10,29 +7,34 @@ export default function() {
 
   return (
     <>
-      <SideNavMenu title="Collections" defaultExpanded={true} >
+      <SideNavMenu title="Anthologies" defaultExpanded={true}>
         {playlists
-          .filter(playlist => playlist.category === "collection")
+          .filter(playlist => playlist.category === "anthology")
           .map(playlist => {
             return (
-              <SideNavMenuItem
-                key={playlist.id}
-                href={"/spotify/" + playlist.id}
-              >
+              <SideNavMenuItem key={playlist.id} href={"/spotify/" + playlist.id}>
                 {playlist.title}
               </SideNavMenuItem>
             );
           })}
       </SideNavMenu>
-      <SideNavMenu title="Finished Playlists" defaultExpanded={true} >
+      <SideNavMenu title="Collections" defaultExpanded={true}>
+        {playlists
+          .filter(playlist => playlist.category === "collection")
+          .map(playlist => {
+            return (
+              <SideNavMenuItem key={playlist.id} href={"/spotify/" + playlist.id}>
+                {playlist.title}
+              </SideNavMenuItem>
+            );
+          })}
+      </SideNavMenu>
+      <SideNavMenu title="Finished Playlists" defaultExpanded={true}>
         {playlists
           .filter(playlist => playlist.category === "finished")
           .map(playlist => {
             return (
-              <SideNavMenuItem
-                key={playlist.id}
-                href={"/spotify/" + playlist.id}
-              >
+              <SideNavMenuItem key={playlist.id} href={"/spotify/" + playlist.id}>
                 {playlist.title}
               </SideNavMenuItem>
             );

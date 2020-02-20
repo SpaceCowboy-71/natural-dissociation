@@ -45,6 +45,8 @@
   margin-top: $spacing-08;
   margin-bottom: $spacing-08;
   @include carbon--type-style("productive-heading-03");
+  margin-left: 30px;
+  text-indent: -30px;
 }
 
 .landing-page-list__item {

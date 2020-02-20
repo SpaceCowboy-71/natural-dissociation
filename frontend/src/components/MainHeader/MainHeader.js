@@ -155,7 +155,7 @@ const EnhancedInformationHeaderGlobalAction = () => {
           <br />
           Made utilizing the <Link href="https://www.carbondesignsystem.com/">Carbon Design System</Link>
           <br />
-          Footer made with <Link href="https://www.misha.studio/waveformer/">Waveformer</Link>
+          Footer created with <Link href="https://www.misha.studio/waveformer/">Waveformer</Link>
           <br />
           <br />
           {t("Last updated on")}

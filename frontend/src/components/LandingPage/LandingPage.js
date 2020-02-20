@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Button,
-  Tabs,
-  Tab,
-  ListItem,
-  UnorderedList
-} from "carbon-components-react";
+import { Breadcrumb, BreadcrumbItem, Button, Tabs, Tab, ListItem, UnorderedList } from "carbon-components-react";
 import logo from "./tab-illo.png";
 import WaveformLLLarge from "./Images/LL.svg";
 import { useTranslation } from "react-i18next";
@@ -36,9 +28,7 @@ const LandingPage = () => {
               <a href="/">{t("Stay a while")}</a>
             </BreadcrumbItem>
           </Breadcrumb>
-          <h1 className="landing-page__heading">
-            Make yourself comfortable, Hacker.
-          </h1>
+          <h1 className="landing-page__heading">Make yourself comfortable, Hacker.</h1>
         </div>
       </div>
       <div className="bx--row landing-page__r2">
@@ -48,24 +38,16 @@ const LandingPage = () => {
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-md-4 bx--col-lg-7">
-                    <h2 className="landing-page__subheading">
-                      What is Carbon?
-                    </h2>
+                    <h2 className="landing-page__subheading">What is <em>Natural Dissociation</em>?</h2>
                     <p className="landing-page__p">
-                      Carbon is IBM’s open-source design system for digital
-                      products and experiences. With the IBM Design Language as
-                      its foundation, the system consists of working code,
-                      design tools and resources, human interface guidelines,
-                      and a vibrant community of contributors.
+                      Carbon is IBM’s open-source design system for digital products and experiences. With the IBM Design Language
+                      as its foundation, the system consists of working code, design tools and resources, human interface
+                      guidelines, and a vibrant community of contributors.
                     </p>
-                    <Button>Learn more</Button>
+                    <Button href="/overview" >Take the Plunge</Button>
                   </div>
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
-                    <img
-                      className="landing-page__illo"
-                      src={logo}
-                      alt="Carbon Illustration"
-                    />
+                    <img className="landing-page__illo" src={logo} alt="Carbon Illustration" />
                   </div>
                 </div>
               </div>
@@ -75,25 +57,21 @@ const LandingPage = () => {
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-10 bx--col-md-6 ">
                     <h2 className="landing-page__subheading">
-                      The playlists presented on this site are split into three
-                      categories:
+                      The playlists presented on this site are split into three categories:
                     </h2>
                     <UnorderedList className="landing-page-list">
                       <ListItem className="landing-page-list__item">
-                        <strong>{"Collections: "}</strong>Malis bonorum ut ius.
-                        In vel offendit inimicus expetendis, signiferumque
-                        vituperatoribus id vis, est modo ubique te. Nonumes
-                        omittantur voluptatibus.
+                        <strong>{"Anthologies: "}</strong>Compilations of works of the same or very similar artists, these
+                        completed playlists are following a distinct idea and are meant to be played in the listed order.
                       </ListItem>
                       <ListItem className="landing-page-list__item">
-                        <strong>{"Finished playlists: "}</strong>Lorem ipsum
-                        dolor sit amet, has ex maiorum propriae scaevola. Duo eu
-                        placerat mediocrem, ad mea consul fabellas legendos ne.
+                        <strong>{"Collections: "}</strong>Ever-growing playlists that are only loosely following a common theme.
+                        As they are subject to changes and neither have a beginning nor an end, Shuffle is the best way of
+                        listening to them.
                       </ListItem>
                       <ListItem className="landing-page-list__item">
-                        <strong>{"WIP-playlists: "}</strong>Virtute vulputate
-                        his an, ut assum epicuri mei. Dico eligendi ullamcorper
-                        ea duo. Erat saepe erroribus in sit, ex eius.
+                        <strong>{"Finished playlists: "}</strong>Self-contained selections of about the length of an album, they
+                        are built around certain emotions, thoughts or motifs.
                       </ListItem>
                     </UnorderedList>
                   </div>
@@ -104,21 +82,14 @@ const LandingPage = () => {
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-9 bx--col-md-6">
-                    <h2 className="landing-page__subheading">
-                      / Natural / Dissociation /
-                    </h2>
+                    <h2 className="landing-page__subheading">/ Natural / Dissociation /</h2>
                     <p className="landing-page__p">
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                      magna aliquyam erat, sed diam voluptua. At vero eos et
-                      accusam et justo duo dolores et ea rebum. Stet clita kasd
-                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                      sit amet. <br /> Lorem ipsum dolor sit amet, consetetur
-                      sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                      ut labore et dolore magna aliquyam erat, sed diam
-                      voluptua. At vero eos et accusam et justo duo dolores et
-                      ea rebum. Stet clita kasd gubergren, no sea takimata
-                      sanctus est Lorem ipsum dolor sit amet.
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                      dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <br /> Lorem ipsum dolor sit
+                      amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                      erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                      no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
                   </div>
                 </div>
