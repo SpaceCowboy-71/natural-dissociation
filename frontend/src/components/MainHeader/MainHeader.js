@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from "react";
-import AppSwitcher20 from "@carbon/icons-react/lib/app-switcher/20";
 import Information20 from "@carbon/icons-react/lib/information/20";
 import Launch16 from "@carbon/icons-react/lib/launch/16";
 import {
@@ -108,9 +107,9 @@ const MainHeader = () => {
 
                 <HeaderGlobalBar>
                   <EnhancedInformationHeaderGlobalAction />
-                  <HeaderGlobalAction aria-label="App Switcher">
+                  {/*                   <HeaderGlobalAction aria-label="App Switcher">
                     <AppSwitcher20 />
-                  </HeaderGlobalAction>
+                  </HeaderGlobalAction> */}
                 </HeaderGlobalBar>
               </Header>
             </>

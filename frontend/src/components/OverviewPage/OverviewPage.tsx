@@ -25,8 +25,7 @@ const headers = [
 
 const OverviewPage = () => {
   //const [totalItems, setTotalItems] = useState(0);
-  const [firstRowIndex, setFirstRowIndex] = useState(0);
-  const [currentPageSize, setCurrentPageSize] = useState(10);
+
   //setTotalItems(useAllSpotifyPlaylists().length);
   //const rows = useAllSpotifyPlaylists();
   const allPlaylists = useAllSpotifyPlaylists();
@@ -37,24 +36,10 @@ const OverviewPage = () => {
     <div className="bx--grid bx--no-gutter overview-page-main-container">
       <PlaylistTable
         headers={headers}
-        rows={rows.slice(firstRowIndex, firstRowIndex + currentPageSize)}
+        rows={rows}
         allPlaylists={allPlaylists}
       />
-      <Pagination
-        className="overview-page-datatable-pagination"
-        totalItems={totalItems}
-        backwardText="Previous page"
-        forwardText="Next page"
-        pageSize={currentPageSize}
-        pageSizes={[5, 10, 15, 25]}
-        itemsPerPageText="Items per page"
-        onChange={({ page, pageSize }) => {
-          if (pageSize !== currentPageSize) {
-            setCurrentPageSize(pageSize);
-          }
-          setFirstRowIndex(pageSize * (page - 1));
-        }}
-      />
+      
     </div>
   );
 };
