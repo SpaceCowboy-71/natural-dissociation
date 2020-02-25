@@ -34,7 +34,7 @@ const MainHeader = () => {
             false
           );
 
-          let headerExtendOverlay;
+          /* let headerExtendOverlay;
           if (isSideNavExpanded) {
             headerExtendOverlay = <div className="header-extend-overlay--inactive" />;
           } else {
@@ -44,7 +44,7 @@ const MainHeader = () => {
                 onClick={isSideNavExpanded === false ? onClickSideNavExpand : null}
               />
             );
-          }
+          } */
 
           let headerReturnOverlay;
           if (isSideNavExpanded) {
@@ -63,7 +63,7 @@ const MainHeader = () => {
                 //  isSideNavExpanded === true ? onClickSideNavExpand : null
                 //}
               >
-                {headerExtendOverlay}
+                {/* {headerExtendOverlay} */}
                 {headerReturnOverlay}
                 <HeaderMenuButton aria-label="Open menu" onClick={onClickSideNavExpand} isActive={isSideNavExpanded} />
                 <HeaderName href="/" prefix="Natural">
