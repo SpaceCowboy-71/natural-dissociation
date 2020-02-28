@@ -1,6 +1,6 @@
 import React from "react";
 import { Breadcrumb, BreadcrumbItem, Button, Tabs, Tab, ListItem, UnorderedList } from "carbon-components-react";
-import logo from "./tab-illo.png";
+import logo from "./Images/tab-illo.png";
 import WaveformLLLarge from "./Images/LL.svg";
 import { useTranslation } from "react-i18next";
 
@@ -38,13 +38,17 @@ const LandingPage = () => {
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-md-4 bx--col-lg-7">
-                    <h2 className="landing-page__subheading">What is <em>Natural Dissociation</em>?</h2>
+                    <h2 className="landing-page__subheading">
+                      What is <em>Natural Dissociation</em>?
+                    </h2>
                     <p className="landing-page__p">
-                      Carbon is IBM’s open-source design system for digital products and experiences. With the IBM Design Language
-                      as its foundation, the system consists of working code, design tools and resources, human interface
-                      guidelines, and a vibrant community of contributors.
+                      On this website I'm presenting my well-curated Spotify playlists of different sizes, formats and styles.
+                      <br /> Select the "Playlists" tab to find out more about the classification system or straightaway pick one
+                      of the playlists presented in the menu to get additional information about it. Alternatively you can view
+                      them in the overview table and sort by category or genre, or even search for certain keywords. <br />
+                      Have fun listening!
                     </p>
-                    <Button href="/overview" >Take the Plunge</Button>
+                    <Button href="/overview">Take the Plunge</Button>
                   </div>
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                     <img className="landing-page__illo" src={logo} alt="Carbon Illustration" />
@@ -71,7 +75,7 @@ const LandingPage = () => {
                       </ListItem>
                       <ListItem className="landing-page-list__item">
                         <strong>{"Finished playlists: "}</strong>Self-contained selections of about the length of an album, they
-                        are built around certain emotions, thoughts or motifs.
+                        are built around certain emotions, thoughts or motifs and are less about genres.
                       </ListItem>
                     </UnorderedList>
                   </div>

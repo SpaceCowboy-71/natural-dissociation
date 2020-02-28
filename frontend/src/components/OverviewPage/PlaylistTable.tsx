@@ -14,7 +14,6 @@ import {
   TableToolbar,
   TableToolbarSearch,
   TableToolbarMenu,
-  TableToolbarAction,
   Checkbox,
   Pagination
 } from "carbon-components-react";
