@@ -18,17 +18,18 @@ const props = {
 };
 
 const LandingPage = () => {
-  const { t } = useTranslation();
   return (
     <div className="bx--grid bx--grid--full-width landing-page bx--no-gutter">
       <div className="bx--row landing-page__banner">
         <div className="bx--col-lg-16">
           <Breadcrumb noTrailingSlash aria-label="Page navigation">
             <BreadcrumbItem>
-              <a href="/">{t("Stay a while")}</a>
+              <a href="/">Make yourself comfortable</a>
             </BreadcrumbItem>
           </Breadcrumb>
-          <h1 className="landing-page__heading">Make yourself comfortable, Hacker.</h1>
+          <h1 className="landing-page__heading">
+            Welcome to <em>Natural Dissociation</em>.
+          </h1>
         </div>
       </div>
       <div className="bx--row landing-page__r2">
@@ -46,9 +47,10 @@ const LandingPage = () => {
                       <br /> Select the "Playlists" tab to find out more about the classification system or straightaway pick one
                       of the playlists presented in the menu to get additional information about it. Alternatively you can view
                       them in the overview table and sort by category or genre, or even search for certain keywords. <br />
+                      You can also add your favorite songs to a collaborative playlist by clicking the button below. <br />
                       Have fun listening!
                     </p>
-                    <Button href="/overview">Take the Plunge</Button>
+                    <Button href="/spotify/111EfTDnLmNIdSHK2m5L">Guestbook</Button>
                   </div>
                   <div className="bx--col-md-4 bx--offset-lg-1 bx--col-lg-8">
                     <img className="landing-page__illo" src={logo} alt="Carbon Illustration" />
