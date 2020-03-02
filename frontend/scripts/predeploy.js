@@ -52,7 +52,7 @@ for (const locale of getDirectories("../public/locales")) {
   const date = new Date();
 
   translation["Version Number"] = `V ${versions.join(".")}`;
-  translation["Copyright"] = `Copyright © ${date.getFullYear()} B. Bärenstark`;
+  translation["Copyright"] = `Copyright © ${date.getFullYear()} L. Schönmann`;
   translation["Last updated on"] = `Last updated on ${date.getFullYear()}-${getValidMonth()}-${date.getDate()}`;
 
   fs.writeFileSync(pathToLocalization, JSON.stringify(translation, null, 2));
