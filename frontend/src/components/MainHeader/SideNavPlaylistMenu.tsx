@@ -7,9 +7,9 @@ export default function() {
 
   return (
     <>
-      <SideNavMenu title="Anthologies" defaultExpanded={true}>
+      <SideNavMenu title="Finished Playlists" defaultExpanded={true}>
         {playlists
-          .filter(playlist => playlist.category === "anthology")
+          .filter(playlist => playlist.category === "finished")
           .map(playlist => {
             return (
               <SideNavMenuItem key={playlist.id} href={"/spotify/" + playlist.id}>
@@ -29,9 +29,9 @@ export default function() {
             );
           })}
       </SideNavMenu>
-      <SideNavMenu title="Finished Playlists" defaultExpanded={true}>
+      <SideNavMenu title="Anthologies" defaultExpanded={true}>
         {playlists
-          .filter(playlist => playlist.category === "finished")
+          .filter(playlist => playlist.category === "anthology")
           .map(playlist => {
             return (
               <SideNavMenuItem key={playlist.id} href={"/spotify/" + playlist.id}>

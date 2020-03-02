@@ -67,24 +67,24 @@ const LandingPage = () => {
                     </h2>
                     <UnorderedList className="landing-page-list">
                       <ListItem className="landing-page-list__item">
-                        <strong>{"Anthologies: "}</strong>Compilations of works of the same or very similar artists, these
-                        completed playlists are following a distinct idea and are meant to be played in the listed order.
+                        <strong>{"Finished playlists: "}</strong>Self-contained selections of about the length of an album, they
+                        are built around certain emotions, thoughts or motifs and are less about genres.
                       </ListItem>
                       <ListItem className="landing-page-list__item">
                         <strong>{"Collections: "}</strong>Ever-growing playlists that are only loosely following a common theme.
                         As they are subject to changes and neither have a beginning nor an end, Shuffle is the best way of
                         listening to them.
-                      </ListItem>
+                      </ListItem>{" "}
                       <ListItem className="landing-page-list__item">
-                        <strong>{"Finished playlists: "}</strong>Self-contained selections of about the length of an album, they
-                        are built around certain emotions, thoughts or motifs and are less about genres.
+                        <strong>{"Anthologies: "}</strong>Compilations of works of the same or very similar artists, these
+                        completed playlists are following a distinct idea and are meant to be played in the listed order.
                       </ListItem>
                     </UnorderedList>
                   </div>
                 </div>
               </div>
             </Tab>
-            <Tab {...props.tab} label="The Name">
+            {/* <Tab {...props.tab} label="The Name">
               <div className="bx--grid bx--grid--no-gutter bx--grid--full-width">
                 <div className="bx--row landing-page__tab-content">
                   <div className="bx--col-lg-9 bx--col-md-6">
@@ -100,18 +100,12 @@ const LandingPage = () => {
                   </div>
                 </div>
               </div>
-            </Tab>
+            </Tab> */}
           </Tabs>
         </div>
       </div>
       <div className="bx--row landing-page__r3">
         <img className="landing-page__waveform" src={WaveformLLLarge} alt="Carbon Illustration" />
-        {/* <div className="bx--col-md-4 bx--col-lg-4">
-          <h3 className="landing-page__label">The Principles</h3>
-        </div>
-        <div className="bx--col-md-4 bx--col-lg-4">Carbon is Open</div>
-        <div className="bx--col-md-4 bx--col-lg-4">Carbon is Modular</div>
-        <div className="bx--col-md-4 bx--col-lg-4">Carbon is Consistent</div> */}
       </div>
     </div>
   );
